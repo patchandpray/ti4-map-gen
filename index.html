@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Operation Clever Knowledge — TI4 Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b16;
+      --panel: #12182b;
+      --ink: #f4efe4;
+      --muted: #b7b1a4;
+      --gold: #e4c37a;
+      --line: rgba(228, 195, 122, 0.28);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Source Sans 3", sans-serif; }
+    body { min-height: 100vh; }
+    a { color: var(--gold); }
+    header {
+      padding: 1.25rem 1.5rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: end;
+    }
+    h1, h2, h3 { font-family: Cinzel, serif; margin: 0; }
+    h1 { font-size: clamp(1.4rem, 3vw, 2.1rem); letter-spacing: 0.04em; }
+    .sub { color: var(--muted); margin-top: 0.35rem; }
+    .toolbar { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+    button, .btn {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.4rem 0.85rem;
+      cursor: pointer;
+      font: inherit;
+      text-decoration: none;
+    }
+    button.active, button:hover, .btn:hover { border-color: var(--gold); color: var(--gold); }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr);
+      gap: 1rem;
+      padding: 0.75rem 1.5rem 2rem;
+    }
+    .map-wrap {
+      background: radial-gradient(circle at center, #15203a 0%, #070b16 72%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: calc(100vh - 7.5rem);
+    }
+    .sidebar { display: grid; gap: 0.85rem; align-content: start; max-height: calc(100vh - 7.5rem); overflow: auto; }
+    svg { width: 100%; height: auto; display: block; }
+    .hex { cursor: pointer; }
+    .hex.dim { opacity: 0.28; }
+    .overlay-label { font-size: 11px; fill: #f6f1e3; paint-order: stroke; stroke: #140c08; stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+    .tile-id { font-size: 10px; font-weight: 700; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.9rem;
+    }
+    .player {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+    .player img.icon { width: 56px; height: 56px; object-fit: contain; background: #0006; border-radius: 10px; }
+    .player.selected { outline: 2px solid var(--gold); }
+    .meta { color: var(--muted); font-size: 0.92rem; }
+    .links { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 0.3rem; font-size: 0.92rem; }
+    .detail dt { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .detail dd { margin: 0 0 0.45rem; }
+    .tts { font-family: ui-monospace, monospace; font-size: 0.78rem; word-break: break-word; color: var(--muted); }
+    .unused { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.55rem; font-size: 0.85rem; }
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      .map-wrap { min-height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Operation Clever Knowledge</h1>
+      <p class="sub">6-player TI4 galaxy · Thunder’s Edge Mecatol · locally assembled milty draft</p>
+    </div>
+    <div class="toolbar">
+      <button id="view-art" class="active" type="button">Tile art</button>
+      <button id="view-schema" type="button">Schematic</button>
+      <a class="btn" href="data/map.csv" download>Download CSV</a>
+      <a class="btn" href="https://milty.shenanigans.be/d/20260630_f19cd238308d0d7a?fresh=1#map" target="_blank" rel="noreferrer">Milty source</a>
+    </div>
+  </header>
+  <main>
+    <section class="map-wrap">
+      <svg id="galaxy" viewBox="-360 -410 720 820" role="img" aria-label="Twilight Imperium galaxy map"></svg>
+    </section>
+    <aside class="sidebar">
+      <section class="card" id="picks"></section>
+      <section class="card detail" id="detail">
+        <h2>Tile</h2>
+        <p class="meta">Click a hex or a player to inspect it.</p>
+      </section>
+      <section class="card">
+        <h2>TTS map string</h2>
+        <p class="tts" id="tts"></p>
+        <button type="button" id="copy-tts">Copy</button>
+      </section>
+      <section class="card">
+        <h2>Left in the pool</h2>
+        <div id="unused"></div>
+      </section>
+    </aside>
+  </main>
+  <script src="data/map.js"></script>
+  <script>
+    const SIZE = 58;
+    const data = window.MAP_DATA;
+    const svg = document.getElementById("galaxy");
+    let showArt = true;
+    let focusPlayer = null;
+    let selected = null;
+
+    function pixel(q, r) {
+      return [SIZE * 1.5 * q, SIZE * (Math.sqrt(3) / 2 * q + Math.sqrt(3) * r)];
+    }
+    function hexPoints(cx, cy) {
+      return Array.from({ length: 6 }, (_, i) => {
+        const a = Math.PI / 180 * 60 * i;
+        return `${cx + SIZE * Math.cos(a)},${cy + SIZE * Math.sin(a)}`;
+      }).join(" ");
+    }
+    function playerColor(name) {
+      return (data.players.find(p => p.name === name) || {}).color || "#e4c37a";
+    }
+    function shortLabel(hex) {
+      if (hex.is_mecatol) return "Mecatol Rex";
+      if (hex.is_home) return hex.player;
+      return hex.system_label;
+    }
+
+    function renderMap() {
+      svg.innerHTML = "";
+      const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+      svg.appendChild(defs);
+      data.hexes.forEach((hex) => {
+        const [cx, cy] = pixel(hex.q, hex.r);
+        const clipId = `clip-${hex.q}-${hex.r}`;
+        const clip = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
+        clip.setAttribute("id", clipId);
+        const clipPoly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        clipPoly.setAttribute("points", hexPoints(cx, cy));
+        clip.appendChild(clipPoly);
+        defs.appendChild(clip);
+
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.classList.add("hex");
+        if (focusPlayer && hex.player && hex.player !== focusPlayer) g.classList.add("dim");
+        g.addEventListener("click", () => {
+          selected = hex;
+          focusPlayer = hex.player;
+          renderAll();
+        });
+
+        const fill = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        fill.setAttribute("points", hexPoints(cx, cy));
+        fill.setAttribute("fill", hex.is_mecatol ? "#3b2a12" : "#182238");
+        g.appendChild(fill);
+
+        if (showArt) {
+          const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
+          image.setAttribute("href", hex.image_url);
+          image.setAttribute("x", cx - SIZE);
+          image.setAttribute("y", cy - SIZE);
+          image.setAttribute("width", SIZE * 2);
+          image.setAttribute("height", SIZE * 2);
+          image.setAttribute("clip-path", `url(#${clipId})`);
+          image.setAttribute("preserveAspectRatio", "xMidYMid slice");
+          g.appendChild(image);
+        } else {
+          const name = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          name.setAttribute("x", cx);
+          name.setAttribute("y", cy + 4);
+          name.setAttribute("text-anchor", "middle");
+          name.setAttribute("class", "overlay-label");
+          name.textContent = shortLabel(hex).slice(0, 22);
+          g.appendChild(name);
+          if (hex.resources || hex.influence) {
+            const stats = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            stats.setAttribute("x", cx);
+            stats.setAttribute("y", cy + 20);
+            stats.setAttribute("text-anchor", "middle");
+            stats.setAttribute("class", "overlay-label");
+            stats.textContent = `${hex.resources}/${hex.influence}`;
+            g.appendChild(stats);
+          }
+        }
+
+        const border = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        border.setAttribute("points", hexPoints(cx, cy));
+        border.setAttribute("fill", "none");
+        border.setAttribute("stroke", playerColor(hex.player));
+        border.setAttribute("stroke-width", hex.is_home || hex.is_mecatol ? 5 : 2.25);
+        g.appendChild(border);
+
+        const id = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        id.setAttribute("x", cx);
+        id.setAttribute("y", cy - SIZE * 0.62);
+        id.setAttribute("text-anchor", "middle");
+        id.setAttribute("class", "overlay-label tile-id");
+        id.textContent = hex.tile_id;
+        g.appendChild(id);
+
+        if (hex.is_home) {
+          const len = Math.hypot(cx, cy) || 1;
+          const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          extra.setAttribute("x", cx + (cx / len) * SIZE * 0.95);
+          extra.setAttribute("y", cy + (cy / len) * SIZE * 0.95);
+          extra.setAttribute("text-anchor", "middle");
+          extra.setAttribute("class", "overlay-label");
+          extra.textContent = hex.player;
+          g.appendChild(extra);
+        } else if (!showArt && (hex.wormhole || hex.anomaly)) {
+          const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          extra.setAttribute("x", cx);
+          extra.setAttribute("y", cy + SIZE * 0.72);
+          extra.setAttribute("text-anchor", "middle");
+          extra.setAttribute("class", "overlay-label");
+          extra.textContent = hex.wormhole || hex.anomaly;
+          g.appendChild(extra);
+        }
+        svg.appendChild(g);
+      });
+    }
+
+    function renderPicks() {
+      const root = document.getElementById("picks");
+      root.innerHTML = "<h2>Draft picks</h2>";
+      data.players.forEach((p) => {
+        const el = document.createElement("article");
+        el.className = "player" + (focusPlayer === p.name ? " selected" : "");
+        el.style.borderLeft = `4px solid ${p.color}`;
+        el.innerHTML = `
+          <img class="icon" alt="${p.faction} icon" src="${p.icon_url}" />
+          <div>
+            <h3>${p.seat}: ${p.name}${p.also_known_as ? ` <span class="meta">(${p.also_known_as})</span>` : ""}</h3>
+            <div><a href="${p.wiki}" target="_blank" rel="noreferrer">${p.faction}</a></div>
+            <div class="meta">Slice ${p.slice} · home ${p.homesystem} · ${p.slice_summary.resources}/${p.slice_summary.influence}</div>
+            <div class="links">
+              <a href="${p.wiki}" target="_blank" rel="noreferrer">Wiki</a>
+              <a href="${p.reference_url}" target="_blank" rel="noreferrer">Reference card</a>
+            </div>
+          </div>`;
+        el.addEventListener("click", (event) => {
+          if (event.target.closest("a")) return;
+          focusPlayer = focusPlayer === p.name ? null : p.name;
+          selected = data.hexes.find(h => h.is_home && h.player === p.name) || selected;
+          renderAll();
+        });
+        root.appendChild(el);
+      });
+    }
+
+    function renderDetail() {
+      const root = document.getElementById("detail");
+      const hex = selected || data.hexes.find(h => h.is_mecatol);
+      const planets = (hex.planets || []).map(p =>
+        `${p.name} ${p.resources}/${p.influence}${p.trait ? " · " + p.trait : ""}${p.legendary ? " · legendary" : ""}${p.specialties.length ? " · " + p.specialties.join(", ") : ""}`
+      ).join("<br>");
+      const stations = (hex.stations || []).map(s => `${s.name} ${s.resources}/${s.influence}`).join("<br>");
+      root.innerHTML = `
+        <h2>${hex.system_label}</h2>
+        <dl>
+          <dt>Tile</dt><dd>${hex.tile_id}${hex.is_home ? " · home" : ""}${hex.is_mecatol ? " · Mecatol" : ""}</dd>
+          ${hex.player ? `<dt>Player</dt><dd>${hex.seat}: ${hex.player} · ${hex.faction}</dd>` : ""}
+          ${hex.slice ? `<dt>Slice</dt><dd>${hex.slice} · ${hex.slot_name}</dd>` : ""}
+          <dt>Value</dt><dd>${hex.resources}/${hex.influence} (optimal ${hex.optimal_resources}/${hex.optimal_influence})</dd>
+          ${hex.wormhole ? `<dt>Wormhole</dt><dd>${hex.wormhole}</dd>` : ""}
+          ${hex.anomaly ? `<dt>Anomaly</dt><dd>${hex.anomaly}</dd>` : ""}
+          ${planets ? `<dt>Planets</dt><dd>${planets}</dd>` : ""}
+          ${stations ? `<dt>Stations</dt><dd>${stations}</dd>` : ""}
+        </dl>`;
+    }
+
+    function renderUnused() {
+      const root = document.getElementById("unused");
+      const slice = data.unused_slice;
+      root.innerHTML = `
+        <p class="meta">Slice ${slice.slice} leftover · ${slice.resources}/${slice.influence} · ${slice.systems.map(s => s.system_label).join(" · ")}</p>
+        <div class="unused">${data.unused_factions.map(f =>
+          `<a class="chip" href="${f.wiki}" target="_blank" rel="noreferrer">${f.name}</a>`
+        ).join("")}</div>`;
+    }
+
+    function renderAll() {
+      renderMap();
+      renderPicks();
+      renderDetail();
+      renderUnused();
+      document.getElementById("tts").textContent = data.tts_map_string;
+    }
+
+    document.getElementById("view-art").addEventListener("click", () => {
+      showArt = true;
+      document.getElementById("view-art").classList.add("active");
+      document.getElementById("view-schema").classList.remove("active");
+      renderMap();
+    });
+    document.getElementById("view-schema").addEventListener("click", () => {
+      showArt = false;
+      document.getElementById("view-schema").classList.add("active");
+      document.getElementById("view-art").classList.remove("active");
+      renderMap();
+    });
+    document.getElementById("copy-tts").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(data.tts_map_string);
+      document.getElementById("copy-tts").textContent = "Copied";
+      setTimeout(() => document.getElementById("copy-tts").textContent = "Copy", 1200);
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>
