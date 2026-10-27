@@ -31,7 +31,7 @@
 <text x="384.00" y="156.93" text-anchor="middle" font-size="11">Non-Euclidean</text>
 <text x="384.00" y="75.65" text-anchor="middle" font-size="12">0</text>
 <clipPath id="hex-5-1"><polygon points="544.00,166.28 512.00,221.70 448.00,221.70 416.00,166.28 448.00,110.85 512.00,110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_88B.png" x="416.00" y="110.85" width="128.00" height="110.85" transform="rotate(60 480.00 166.28)" clip-path="url(#hex-5-1)" preserveAspectRatio="xMidYMid slice"/>
+<image href="https://milty.shenanigans.be/img/tiles/ST_88B.png" x="416.00" y="110.85" width="128.00" height="110.85" transform="rotate(120 480.00 166.28)" clip-path="url(#hex-5-1)" preserveAspectRatio="xMidYMid slice"/>
 <polygon points="544.00,166.28 512.00,221.70 448.00,221.70 416.00,166.28 448.00,110.85 512.00,110.85" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
 <text x="480.00" y="131.08" text-anchor="middle" font-size="12">88B</text>
 <clipPath id="hex-6-1"><polygon points="640.00,110.85 608.00,166.28 544.00,166.28 512.00,110.85 544.00,55.43 608.00,55.43"/></clipPath>
