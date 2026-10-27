@@ -68,14 +68,19 @@
       border-radius: 16px;
       padding: 0.9rem;
     }
-    .player {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 0.75rem;
+    .position {
+      display: block;
+      padding: 0.55rem 0.75rem 0.6rem 0.8rem;
+      border-radius: 12px;
       cursor: pointer;
+      border-left: 4px solid var(--gold);
+      background: #0d1322;
     }
-    .player img.icon { width: 56px; height: 56px; object-fit: contain; background: #0006; border-radius: 10px; }
-    .player.selected { outline: 2px solid var(--gold); }
+    .position + .position { margin-top: 0.45rem; }
+    .position h3 { font-size: 1.02rem; line-height: 1.25; }
+    .position .where { color: var(--muted); font-size: 0.82rem; margin-top: 0.1rem; }
+    .position .adj { margin: 0.35rem 0 0; color: var(--ink); font-size: 0.88rem; line-height: 1.35; }
+    .position.selected { outline: 2px solid var(--gold); }
     .meta { color: var(--muted); font-size: 0.92rem; }
     .links { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 0.3rem; font-size: 0.92rem; }
     .detail dt { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -92,14 +97,14 @@
 <body>
   <header>
     <div>
-      <h1>Operation Clever Knowledge</h1>
-      <p class="sub">6-player TI4 galaxy · Thunder’s Edge Mecatol · locally assembled milty draft</p>
+      <h1>Operation Puzzled Energy</h1>
+      <p class="sub">7-player Magi's Madness · flat-top Milty tiles</p>
     </div>
     <div class="toolbar">
       <button id="view-art" class="active" type="button">Tile art</button>
       <button id="view-schema" type="button">Schematic</button>
       <a class="btn" href="data/map.csv" download>Download CSV</a>
-      <a class="btn" href="https://milty.shenanigans.be/d/20260630_f19cd238308d0d7a?fresh=1#map" target="_blank" rel="noreferrer">Milty source</a>
+      <a class="btn" href="https://milty.shenanigans.be/d/20261027_84b2c85b5936a1ae?fresh=1#draft" target="_blank" rel="noreferrer">Milty draft</a>
     </div>
   </header>
   <main>
@@ -118,7 +123,7 @@
         <button type="button" id="copy-tts">Copy</button>
       </section>
       <section class="card">
-        <h2>Left in the pool</h2>
+        <h2>Draft</h2>
         <div id="unused"></div>
       </section>
     </aside>
@@ -146,8 +151,18 @@
     }
     function shortLabel(hex) {
       if (hex.is_mecatol) return "Mecatol Rex";
-      if (hex.is_home) return hex.player;
+      if (hex.is_home) return hex.position;
       return hex.system_label;
+    }
+
+    function fitView() {
+      const pts = data.hexes.map(h => pixel(h.q, h.r));
+      const xs = pts.map(p => p[0]);
+      const ys = pts.map(p => p[1]);
+      const pad = SIZE * 1.6;
+      const minX = Math.min(...xs) - pad;
+      const minY = Math.min(...ys) - pad;
+      svg.setAttribute("viewBox", `${minX} ${minY} ${Math.max(...xs) - minX + pad} ${Math.max(...ys) - minY + pad}`);
     }
 
     function renderMap() {
@@ -166,7 +181,11 @@
 
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.classList.add("hex");
-        if (focusPlayer && hex.player && hex.player !== focusPlayer) g.classList.add("dim");
+        if (focusPlayer) {
+          const home = data.hexes.find(h => h.position === focusPlayer);
+          const related = home && (hex === home || neighborOf(home, hex));
+          if (!related) g.classList.add("dim");
+        }
         g.addEventListener("click", () => {
           selected = hex;
           focusPlayer = hex.player;
@@ -179,15 +198,20 @@
         g.appendChild(fill);
 
         if (showArt) {
+          const art = document.createElementNS("http://www.w3.org/2000/svg", "g");
+          art.setAttribute("clip-path", `url(#${clipId})`);
           const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
+          const w = SIZE * 2;
+          const h = SIZE * Math.sqrt(3);
           image.setAttribute("href", hex.image_url);
-          image.setAttribute("x", cx - SIZE);
-          image.setAttribute("y", cy - SIZE);
-          image.setAttribute("width", SIZE * 2);
-          image.setAttribute("height", SIZE * 2);
-          image.setAttribute("clip-path", `url(#${clipId})`);
-          image.setAttribute("preserveAspectRatio", "xMidYMid slice");
-          g.appendChild(image);
+          image.setAttribute("x", cx - w / 2);
+          image.setAttribute("y", cy - h / 2);
+          image.setAttribute("width", w);
+          image.setAttribute("height", h);
+          image.setAttribute("preserveAspectRatio", "xMidYMid meet");
+          if (hex.image_rotation) image.setAttribute("transform", `rotate(${hex.image_rotation} ${cx} ${cy})`);
+          art.appendChild(image);
+          g.appendChild(art);
         } else {
           const name = document.createElementNS("http://www.w3.org/2000/svg", "text");
           name.setAttribute("x", cx);
@@ -210,7 +234,7 @@
         const border = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         border.setAttribute("points", hexPoints(cx, cy));
         border.setAttribute("fill", "none");
-        border.setAttribute("stroke", playerColor(hex.player));
+        border.setAttribute("stroke", hex.color || "#8aa0c8");
         border.setAttribute("stroke-width", hex.is_home || hex.is_mecatol ? 5 : 2.25);
         g.appendChild(border);
 
@@ -219,17 +243,16 @@
         id.setAttribute("y", cy - SIZE * 0.62);
         id.setAttribute("text-anchor", "middle");
         id.setAttribute("class", "overlay-label tile-id");
-        id.textContent = hex.tile_id;
+        id.textContent = hex.is_home ? "" : hex.tile_id;
         g.appendChild(id);
 
-        if (hex.is_home) {
-          const len = Math.hypot(cx, cy) || 1;
+        if (hex.is_home || hex.is_mecatol) {
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
-          extra.setAttribute("x", cx + (cx / len) * SIZE * 0.95);
-          extra.setAttribute("y", cy + (cy / len) * SIZE * 0.95);
+          extra.setAttribute("x", cx);
+          extra.setAttribute("y", cy + SIZE * 0.55);
           extra.setAttribute("text-anchor", "middle");
           extra.setAttribute("class", "overlay-label");
-          extra.textContent = hex.player;
+          extra.textContent = hex.is_mecatol ? "Mecatol" : hex.position;
           g.appendChild(extra);
         } else if (!showArt && (hex.wormhole || hex.anomaly)) {
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -244,28 +267,30 @@
       });
     }
 
+    function neighborOf(a, b) {
+      return [[1, 0], [0, 1], [-1, 1], [-1, 0], [0, -1], [1, -1]]
+        .some(([dq, dr]) => a.q + dq === b.q && a.r + dr === b.r);
+    }
+
     function renderPicks() {
       const root = document.getElementById("picks");
-      root.innerHTML = "<h2>Draft picks</h2>";
-      data.players.forEach((p) => {
+      root.innerHTML = "<h2>Positions</h2>";
+      const homes = data.positions.slice().sort((a, b) => a.r - b.r || a.q - b.q);
+      homes.forEach((p) => {
+        const home = data.hexes.find(h => h.position === p.name);
+        const adjacent = data.hexes
+          .filter(h => neighborOf(home, h))
+          .map(h => `${h.is_hyperlane ? "lane" : h.tile_id} ${h.system_label}`);
         const el = document.createElement("article");
-        el.className = "player" + (focusPlayer === p.name ? " selected" : "");
-        el.style.borderLeft = `4px solid ${p.color}`;
+        el.className = "position" + (focusPlayer === p.name ? " selected" : "");
+        el.style.borderLeftColor = p.color;
         el.innerHTML = `
-          <img class="icon" alt="${p.faction} icon" src="${p.icon_url}" />
-          <div>
-            <h3>${p.seat}: ${p.name}${p.also_known_as ? ` <span class="meta">(${p.also_known_as})</span>` : ""}</h3>
-            <div><a href="${p.wiki}" target="_blank" rel="noreferrer">${p.faction}</a></div>
-            <div class="meta">Slice ${p.slice} · home ${p.homesystem} · ${p.slice_summary.resources}/${p.slice_summary.influence}</div>
-            <div class="links">
-              <a href="${p.wiki}" target="_blank" rel="noreferrer">Wiki</a>
-              <a href="${p.reference_url}" target="_blank" rel="noreferrer">Reference card</a>
-            </div>
-          </div>`;
-        el.addEventListener("click", (event) => {
-          if (event.target.closest("a")) return;
+          <h3>${p.name}</h3>
+          <div class="where">${p.q},${p.r} · ${p.resources} resources / ${p.influence} influence next door</div>
+          <p class="adj">${adjacent.join(" · ")}</p>`;
+        el.addEventListener("click", () => {
           focusPlayer = focusPlayer === p.name ? null : p.name;
-          selected = data.hexes.find(h => h.is_home && h.player === p.name) || selected;
+          selected = home;
           renderAll();
         });
         root.appendChild(el);
@@ -283,8 +308,8 @@
         <h2>${hex.system_label}</h2>
         <dl>
           <dt>Tile</dt><dd>${hex.tile_id}${hex.is_home ? " · home" : ""}${hex.is_mecatol ? " · Mecatol" : ""}</dd>
-          ${hex.player ? `<dt>Player</dt><dd>${hex.seat}: ${hex.player} · ${hex.faction}</dd>` : ""}
-          ${hex.slice ? `<dt>Slice</dt><dd>${hex.slice} · ${hex.slot_name}</dd>` : ""}
+          ${hex.position ? `<dt>Position</dt><dd>${hex.position}</dd>` : ""}
+          <dt>Coordinate</dt><dd>${hex.q},${hex.r}</dd>
           <dt>Value</dt><dd>${hex.resources}/${hex.influence} (optimal ${hex.optimal_resources}/${hex.optimal_influence})</dd>
           ${hex.wormhole ? `<dt>Wormhole</dt><dd>${hex.wormhole}</dd>` : ""}
           ${hex.anomaly ? `<dt>Anomaly</dt><dd>${hex.anomaly}</dd>` : ""}
@@ -295,15 +320,19 @@
 
     function renderUnused() {
       const root = document.getElementById("unused");
-      const slice = data.unused_slice;
+      const players = data.players.map(p =>
+        `${p.order}. ${p.name}${p.faction ? " · " + p.faction : ""}${p.turn ? " · to play" : ""}`
+      ).join("<br>");
+      const open = (data.factions || []).filter(f => !f.picked);
       root.innerHTML = `
-        <p class="meta">Slice ${slice.slice} leftover · ${slice.resources}/${slice.influence} · ${slice.systems.map(s => s.system_label).join(" · ")}</p>
-        <div class="unused">${data.unused_factions.map(f =>
+        <p>${players}</p>
+        <div class="unused">${open.map(f =>
           `<a class="chip" href="${f.wiki}" target="_blank" rel="noreferrer">${f.name}</a>`
         ).join("")}</div>`;
     }
 
     function renderAll() {
+      fitView();
       renderMap();
       renderPicks();
       renderDetail();

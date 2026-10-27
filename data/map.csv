@@ -1,38 +1,62 @@
-tts_index,q,r,s,ring,tile_id,system_label,planets,stations,resources,influence,optimal_resources,optimal_influence,wormhole,anomaly,specialties,legendaries,tile_type,tile_set,is_home,is_mecatol,player,seat,faction,slice,slice_slot,slot_name,map_code,image_url
-0,0,0,0,0,112,Mecatol Rex,Mecatol Rex 1/6 legendary,,1,6,0.0,6.0,,,,Mecatol Rex,blue,TE,false,true,,,,,M,Mecatol Rex,M,https://milty.shenanigans.be/img/tiles/ST_112.png
-1,0,-1,1,1,48,Empty space,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,Rens,Speaker,Last Bastion,4,4,inner (Mecatol-adjacent),0-4,https://milty.shenanigans.be/img/tiles/ST_48.png
-2,1,-1,0,1,40,beta wormhole,,,0,0,0.0,0.0,beta,,,,red,BaseGame,false,false,Tim,2nd,The Yssaril Tribes,7,4,inner (Mecatol-adjacent),1-4,https://milty.shenanigans.be/img/tiles/ST_40.png
-3,1,0,-1,1,116,Lemox,Lemox 0/3 cultural,,0,3,0.0,3.0,,entropic scar,,,red,TE,false,false,Jochem,3rd,The Ghosts of Creuss,1,4,inner (Mecatol-adjacent),2-4,https://milty.shenanigans.be/img/tiles/ST_116.png
-4,0,1,-1,1,68,Everra,Everra 3/1 cultural,,3,1,3.0,0.0,,nebula,,,red,PoK,false,false,Sander,4th,The Titans of Ul,2,4,inner (Mecatol-adjacent),3-4,https://milty.shenanigans.be/img/tiles/ST_68.png
-5,-1,1,0,1,43,supernova,,,0,0,0.0,0.0,,supernova,,,red,BaseGame,false,false,Paul,5th,The Empyrean,3,4,inner (Mecatol-adjacent),4-4,https://milty.shenanigans.be/img/tiles/ST_43.png
-6,-1,0,1,1,79,asteroid-field,,,0,0,0.0,0.0,alpha,asteroid-field,,,red,PoK,false,false,Ruben,6th,The Barony of Letnev,6,4,inner (Mecatol-adjacent),5-4,https://milty.shenanigans.be/img/tiles/ST_79.png
-7,0,-2,2,2,34,Centauri / Gral,Centauri 1/3 cultural; Gral 1/1 industrial tech:propulsion,,2,4,0.5,3.5,,,propulsion,,blue,BaseGame,false,false,Rens,Speaker,Last Bastion,4,1,in front of home,0-1,https://milty.shenanigans.be/img/tiles/ST_34.png
-8,1,-2,1,2,115,Industrex,Industrex 2/0 industrial legendary tech:warfare,,2,0,2.0,0.0,,asteroid field,warfare,Industrex,red,TE,false,false,Rens,Speaker,Last Bastion,4,3,left-front (shared),0-3,https://milty.shenanigans.be/img/tiles/ST_115.png
-9,2,-2,0,2,74,Vega Major / Vega Minor,Vega Major 2/1 cultural; Vega Minor 1/2 cultural tech:propulsion,,3,3,2.0,2.0,,,propulsion,,blue,PoK,false,false,Tim,2nd,The Yssaril Tribes,7,1,in front of home,1-1,https://milty.shenanigans.be/img/tiles/ST_74.png
-10,2,-1,-1,2,117,The Watchtower,,The Watchtower 1/1,1,1,0.5,0.5,,,,,red,TE,false,false,Tim,2nd,The Yssaril Tribes,7,3,left-front (shared),1-3,https://milty.shenanigans.be/img/tiles/ST_117.png
-11,2,0,-2,2,26,Lodor,Lodor 3/1 cultural,,3,1,3.0,0.0,alpha,,,,blue,BaseGame,false,false,Jochem,3rd,The Ghosts of Creuss,1,1,in front of home,2-1,https://milty.shenanigans.be/img/tiles/ST_26.png
-12,1,1,-2,2,77,Empty space,,,0,0,0.0,0.0,,,,,red,PoK,false,false,Jochem,3rd,The Ghosts of Creuss,1,3,left-front (shared),2-3,https://milty.shenanigans.be/img/tiles/ST_77.png
-13,0,2,-2,2,109,Bellatrix / Tsion Station,Bellatrix 1/2 industrial,Tsion Station 1/1,2,3,0.5,2.5,,,,,blue,TE,false,false,Sander,4th,The Titans of Ul,2,1,in front of home,3-1,https://milty.shenanigans.be/img/tiles/ST_109.png
-14,-1,2,-1,2,97,Paunus,Paunus 1/3 industrial legendary tech:biotic,,1,3,0.0,3.0,,,biotic,Paunus,blue,TE,false,false,Sander,4th,The Titans of Ul,2,3,left-front (shared),3-3,https://milty.shenanigans.be/img/tiles/ST_97.png
-15,-2,2,0,2,64,Atlas,Atlas 3/1 hazardous,,3,1,3.0,0.0,beta,,,,blue,PoK,false,false,Paul,5th,The Empyrean,3,1,in front of home,4-1,https://milty.shenanigans.be/img/tiles/ST_64.png
-16,-2,1,1,2,69,Accoen / Jeol Ir,Accoen 2/3 industrial; Jeol Ir 2/3 industrial,,4,6,0.0,6.0,,,,,blue,PoK,false,false,Paul,5th,The Empyrean,3,3,left-front (shared),4-3,https://milty.shenanigans.be/img/tiles/ST_69.png
-17,-2,0,2,2,76,Rigel I / Rigel II / Rigel III,Rigel I 0/1 hazardous; Rigel II 1/2 industrial; Rigel III 1/1 industrial tech:biotic,,2,4,0.5,3.5,,,biotic,,blue,PoK,false,false,Ruben,6th,The Barony of Letnev,6,1,in front of home,5-1,https://milty.shenanigans.be/img/tiles/ST_76.png
-18,-1,-1,2,2,38,Abyz / Fria,Abyz 3/0 hazardous; Fria 2/0 hazardous,,5,0,5.0,0.0,,,,,blue,BaseGame,false,false,Ruben,6th,The Barony of Letnev,6,3,left-front (shared),5-3,https://milty.shenanigans.be/img/tiles/ST_38.png
-19,0,-3,3,3,92,Ordinian / Revelation,Ordinian 0/0 legendary,Revelation 1/2,1,2,0.0,2.0,,nebula,,Ordinian,green,TE,true,false,Rens,Speaker,Last Bastion,4,H,home system,0-H,https://milty.shenanigans.be/img/tiles/ST_92.png
-20,1,-3,2,3,108,Kosboth / Capha,Kosboth 0/1 industrial; Capha 3/0 hazardous,,3,1,3.0,1.0,,,,,blue,TE,false,false,Rens,Speaker,Last Bastion,4,0,left of home,0-0,https://milty.shenanigans.be/img/tiles/ST_108.png
-21,2,-3,1,3,63,Vorhal,Vorhal 0/2 cultural tech:biotic,,0,2,0.0,2.0,,,biotic,,blue,PoK,false,false,Tim,2nd,The Yssaril Tribes,7,2,right of home,1-2,https://milty.shenanigans.be/img/tiles/ST_63.png
-22,3,-3,0,3,15,Retillion / Shalloq,Retillion 2/3; Shalloq 1/2,,3,5,0.0,5.0,,,,,green,BaseGame,true,false,Tim,2nd,The Yssaril Tribes,7,H,home system,1-H,https://milty.shenanigans.be/img/tiles/ST_15.png
-23,3,-2,-1,3,103,Vira-Pics III,Vira-Pics III 2/3 cultural+hazardous,,2,3,0.0,3.0,,,,,blue,TE,false,false,Tim,2nd,The Yssaril Tribes,7,0,left of home,1-0,https://milty.shenanigans.be/img/tiles/ST_103.png
-24,3,-1,-2,3,104,Lesab,Lesab 2/1 hazardous+industrial,,2,1,2.0,0.0,,,,,blue,TE,false,false,Jochem,3rd,The Ghosts of Creuss,1,2,right of home,2-2,https://milty.shenanigans.be/img/tiles/ST_104.png
-25,3,0,-3,3,17,delta wormhole,,,0,0,0.0,0.0,delta,,,,green,BaseGame,true,false,Jochem,3rd,The Ghosts of Creuss,1,H,home system,2-H,https://milty.shenanigans.be/img/tiles/ST_17.png
-26,2,1,-3,3,36,Arnor / Lor,Arnor 2/1 industrial; Lor 1/2 industrial,,3,3,2.0,2.0,,,,,blue,BaseGame,false,false,Jochem,3rd,The Ghosts of Creuss,1,0,left of home,2-0,https://milty.shenanigans.be/img/tiles/ST_36.png
-27,1,2,-3,3,114,entropic scar,,,0,0,0.0,0.0,,entropic scar,,,red,TE,false,false,Sander,4th,The Titans of Ul,2,2,right of home,3-2,https://milty.shenanigans.be/img/tiles/ST_114.png
-28,0,3,-3,3,55,Elysium,Elysium 4/1,,4,1,4.0,0.0,,,,,green,PoK,true,false,Sander,4th,The Titans of Ul,2,H,home system,3-H,https://milty.shenanigans.be/img/tiles/ST_55.png
-29,-1,3,-2,3,22,Tar'mann,Tar'mann 1/1 industrial tech:biotic,,1,1,0.5,0.5,,,biotic,,blue,BaseGame,false,false,Sander,4th,The Titans of Ul,2,0,left of home,3-0,https://milty.shenanigans.be/img/tiles/ST_22.png
-30,-2,3,-1,3,80,supernova,,,0,0,0.0,0.0,,supernova,,,red,PoK,false,false,Paul,5th,The Empyrean,3,2,right of home,4-2,https://milty.shenanigans.be/img/tiles/ST_80.png
-31,-3,3,0,3,56,The Dark,The Dark 3/4,,3,4,0.0,4.0,,,,,green,PoK,true,false,Paul,5th,The Empyrean,3,H,home system,4-H,https://milty.shenanigans.be/img/tiles/ST_56.png
-32,-3,2,1,3,100,Tempesta,Tempesta 1/1 hazardous legendary tech:propulsion,,1,1,0.5,0.5,,,propulsion,Tempesta,blue,TE,false,false,Paul,5th,The Empyrean,3,0,left of home,4-0,https://milty.shenanigans.be/img/tiles/ST_100.png
-33,-3,1,2,3,42,nebula,,,0,0,0.0,0.0,,nebula,,,red,BaseGame,false,false,Ruben,6th,The Barony of Letnev,6,2,right of home,5-2,https://milty.shenanigans.be/img/tiles/ST_42.png
-34,-3,0,3,3,10,Arc Prime / Wren Terra,Arc Prime 4/0; Wren Terra 2/1,,6,1,6.0,0.0,,,,,green,BaseGame,true,false,Ruben,6th,The Barony of Letnev,6,H,home system,5-H,https://milty.shenanigans.be/img/tiles/ST_10.png
-35,-2,-1,3,3,24,Mehar Xull,Mehar Xull 1/3 hazardous tech:warfare,,1,3,0.0,3.0,,,warfare,,blue,BaseGame,false,false,Ruben,6th,The Barony of Letnev,6,0,left of home,5-0,https://milty.shenanigans.be/img/tiles/ST_24.png
-36,-1,-2,3,3,21,Thibah,Thibah 1/1 industrial tech:propulsion,,1,1,0.5,0.5,,,propulsion,,blue,BaseGame,false,false,Rens,Speaker,Last Bastion,4,2,right of home,0-2,https://milty.shenanigans.be/img/tiles/ST_21.png
+tts_index,q,r,s,ring,tile_id,system_label,position,planets,stations,resources,influence,optimal_resources,optimal_influence,wormhole,anomaly,specialties,legendaries,tile_type,tile_set,is_home,is_mecatol,is_hyperlane,rotation,image_url
+45,4,0,-4,4,29,Qucen'n / Rarron,,Qucen'n 1/2 industrial; Rarron 0/3 cultural,,1,5,0.0,5.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_29.png
+46,3,1,-4,4,91B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,1,https://milty.shenanigans.be/img/tiles/ST_91B.png
+47,2,2,-4,4,28,Tequ'ran / Torkan,,Tequ'ran 2/0 hazardous; Torkan 0/3 cultural,,2,3,2.0,3.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_28.png
+48,1,3,-4,4,0,Ambassador,Ambassador,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+49,0,4,-4,4,24,Mehar Xull,,Mehar Xull 1/3 hazardous tech:warfare,,1,3,0.0,3.0,,,warfare,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_24.png
+71,5,0,-5,5,80,supernova,,,,0,0,0.0,0.0,,supernova,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_80.png
+72,4,1,-5,5,0,Non-Euclidean,Non-Euclidean,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+73,3,2,-5,5,45,asteroid-field,,,,0,0,0.0,0.0,,asteroid-field,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_45.png
+74,2,3,-5,5,64,Atlas,,Atlas 3/1 hazardous,,3,1,3.0,0.0,beta,,,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_64.png
+75,1,4,-5,5,49,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_49.png
+76,0,5,-5,5,72,Lisis / Velnor,,Lisis 2/2 industrial; Velnor 2/1 industrial tech:warfare,,4,3,3.0,1.0,,,warfare,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_72.png
+103,6,0,-6,6,50,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_50.png
+104,5,1,-6,6,88B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,0,https://milty.shenanigans.be/img/tiles/ST_88B.png
+105,4,2,-6,6,62,Sem-Lore,,Sem-Lore 3/2 cultural tech:cybernetic,,3,2,3.0,0.0,,,cybernetic,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_62.png
+106,3,3,-6,6,75,Loki / Abaddon / Ashtroth,,Loki 1/2 cultural; Abaddon 1/0 cultural; Ashtroth 2/0 hazardous,,4,2,3.0,2.0,,,,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_75.png
+107,2,4,-6,6,74,Vega Major / Vega Minor,,Vega Major 2/1 cultural; Vega Minor 1/2 cultural tech:propulsion,,3,3,2.0,2.0,,,propulsion,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_74.png
+108,1,5,-6,6,79,asteroid-field,,,,0,0,0.0,0.0,alpha,asteroid-field,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_79.png
+109,0,6,-6,6,47,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_47.png
+141,7,0,-7,7,67,Cormund,,Cormund 2/0 hazardous,,2,0,2.0,0.0,,gravity-rift,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_67.png
+142,6,1,-7,7,26,Lodor,,Lodor 3/1 cultural,,3,1,3.0,0.0,alpha,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_26.png
+143,5,2,-7,7,42,nebula,,,,0,0,0.0,0.0,,nebula,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_42.png
+144,4,3,-7,7,70,Kraag / Siig,,Kraag 2/1 hazardous; Siig 0/2 hazardous,,2,3,2.0,2.0,,,,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_70.png
+145,3,4,-7,7,0,Why Can't I Hold All,Why Can't I Hold All,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+146,2,5,-7,7,76,Rigel I / Rigel II / Rigel III,,Rigel I 0/1 hazardous; Rigel II 1/2 industrial; Rigel III 1/1 industrial tech:biotic,,2,4,0.5,3.5,,,biotic,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_76.png
+147,1,6,-7,7,61,Ang,,Ang 2/0 industrial tech:warfare,,2,0,2.0,0.0,,,warfare,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_61.png
+148,0,7,-7,7,0,Final Frontier,Final Frontier,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+185,8,0,-8,8,33,Corneeq / Resulon,,Corneeq 1/2 cultural; Resulon 2/0 cultural,,3,2,2.0,2.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_33.png
+186,7,1,-8,8,44,asteroid-field,,,,0,0,0.0,0.0,,asteroid-field,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_44.png
+187,6,2,-8,8,90B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,1,https://milty.shenanigans.be/img/tiles/ST_90B.png
+188,5,3,-8,8,84A,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,2,https://milty.shenanigans.be/img/tiles/ST_84A.png
+189,4,4,-8,8,85A,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,2,https://milty.shenanigans.be/img/tiles/ST_85A.png
+190,3,5,-8,8,69,Accoen / Jeol Ir,,Accoen 2/3 industrial; Jeol Ir 2/3 industrial,,4,6,0.0,6.0,,,,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_69.png
+191,2,6,-8,8,46,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_46.png
+192,1,7,-8,8,35,Bereg / Lirta IV,,Bereg 3/1 hazardous; Lirta IV 2/3 hazardous,,5,4,3.0,3.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_35.png
+193,0,8,-8,8,59,Archon Vail,,Archon Vail 1/3 hazardous tech:propulsion,,1,3,0.0,3.0,,,propulsion,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_59.png
+236,8,1,-9,9,0,Pain Train,Pain Train,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+237,7,2,-9,9,37,Arinam / Meer,,Arinam 1/2 industrial; Meer 0/4 hazardous tech:warfare,,1,6,0.0,6.0,,,warfare,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_37.png
+238,6,3,-9,9,36,Arnor / Lor,,Arnor 2/1 industrial; Lor 1/2 industrial,,3,3,2.0,2.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_36.png
+239,5,4,-9,9,0,Mountain Fortress,Mountain Fortress,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+240,4,5,-9,9,83A,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,2,https://milty.shenanigans.be/img/tiles/ST_83A.png
+241,3,6,-9,9,68,Everra,,Everra 3/1 cultural,,3,1,3.0,0.0,,nebula,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_68.png
+242,2,7,-9,9,78,Empty space,,,,0,0,0.0,0.0,,,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_78.png
+243,1,8,-9,9,41,gravity-rift,,,,0,0,0.0,0.0,,gravity-rift,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_41.png
+293,8,2,-10,10,22,Tar'mann,,Tar'mann 1/1 industrial tech:biotic,,1,1,0.5,0.5,,,biotic,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_22.png
+294,7,3,-10,10,66,Hope's End,,Hope's End 3/0 hazardous legendary,,3,0,3.0,0.0,,,,Hope's End,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_66.png
+295,6,4,-10,10,27,New Albion / Starpoint,,New Albion 1/1 industrial tech:biotic; Starpoint 3/1 hazardous,,4,2,3.5,0.5,,,biotic,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_27.png
+296,5,5,-10,10,34,Centauri / Gral,,Centauri 1/3 cultural; Gral 1/1 industrial tech:propulsion,,2,4,0.5,3.5,,,propulsion,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_34.png
+297,4,6,-10,10,65,Primor,,Primor 2/1 cultural legendary,,2,1,2.0,0.0,,,,Primor,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_65.png
+298,3,7,-10,10,18,Mecatol Rex,,Mecatol Rex 1/6,,1,6,0.0,6.0,,,,,blue,BaseGame,false,true,false,0,https://milty.shenanigans.be/img/tiles/ST_18.png
+299,2,8,-10,10,40,beta wormhole,,,,0,0,0.0,0.0,beta,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_40.png
+356,8,3,-11,11,87B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,4,https://milty.shenanigans.be/img/tiles/ST_87B.png
+357,7,4,-11,11,25,Quann,,Quann 2/1 cultural,,2,1,2.0,0.0,beta,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_25.png
+358,6,5,-11,11,43,supernova,,,,0,0,0.0,0.0,,supernova,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_43.png
+359,5,6,-11,11,48,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_48.png
+360,4,7,-11,11,19,Wellon,,Wellon 1/2 industrial tech:cybernetic,,1,2,0.0,2.0,,,cybernetic,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_19.png
+361,3,8,-11,11,39,alpha wormhole,,,,0,0,0.0,0.0,alpha,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_39.png
+425,8,4,-12,12,86A,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,5,https://milty.shenanigans.be/img/tiles/ST_86A.png
+426,7,5,-12,12,73,Cealdri / Xanhact,,Cealdri 0/2 cultural tech:cybernetic; Xanhact 0/1 hazardous,,0,3,0.0,3.0,,,cybernetic,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_73.png
+427,6,6,-12,12,0,The Floor is Lava,The Floor is Lava,,,0,0,0.0,0.0,,,,,green,,true,false,false,0,https://milty.shenanigans.be/img/tiles/ST_0.png
+428,5,7,-12,12,38,Abyz / Fria,,Abyz 3/0 hazardous; Fria 2/0 hazardous,,5,0,5.0,0.0,,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_38.png
+429,4,8,-12,12,77,Empty space,,,,0,0,0.0,0.0,,,,,red,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_77.png
