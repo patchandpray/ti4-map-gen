@@ -1,189 +1,256 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-442.0 -486.6 884.0 973.1" width="884" height="973">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-174.0 -174.0 1116.0 1290.2" width="1116" height="1290">
 <style>text{font-family:Helvetica,Arial,sans-serif;fill:#f6f1e3;paint-order:stroke;stroke:#140c08;stroke-width:3px;stroke-linejoin:round}</style>
-<rect x="-442.0" y="-486.55375505322445" width="884.0" height="973.1075101064489" fill="#0b1020"/>
-<clipPath id="hex-0--3"><polygon points="64.00,-332.55 32.00,-277.13 -32.00,-277.13 -64.00,-332.55 -32.00,-387.98 32.00,-387.98"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_92.png" x="-64.00" y="-396.55" width="128" height="128" clip-path="url(#hex-0--3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,-332.55 32.00,-277.13 -32.00,-277.13 -64.00,-332.55 -32.00,-387.98 32.00,-387.98" fill="none" stroke="#e67e22" stroke-width="6"/>
-<text x="0.00" y="-286.47" text-anchor="middle" font-size="11">Rens</text>
-<text x="0.00" y="-372.23" text-anchor="middle" font-size="10">92</text>
-<clipPath id="hex-1--3"><polygon points="160.00,-277.13 128.00,-221.70 64.00,-221.70 32.00,-277.13 64.00,-332.55 128.00,-332.55"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_108.png" x="32.00" y="-341.13" width="128" height="128" clip-path="url(#hex-1--3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,-277.13 128.00,-221.70 64.00,-221.70 32.00,-277.13 64.00,-332.55 128.00,-332.55" fill="none" stroke="#e67e22" stroke-width="2.5"/>
-<text x="96.00" y="-231.05" text-anchor="middle" font-size="11">Kosboth / Capha</text>
-<text x="96.00" y="-316.81" text-anchor="middle" font-size="10">108</text>
-<clipPath id="hex-2--3"><polygon points="256.00,-221.70 224.00,-166.28 160.00,-166.28 128.00,-221.70 160.00,-277.13 224.00,-277.13"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_63.png" x="128.00" y="-285.70" width="128" height="128" clip-path="url(#hex-2--3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="256.00,-221.70 224.00,-166.28 160.00,-166.28 128.00,-221.70 160.00,-277.13 224.00,-277.13" fill="none" stroke="#2ecc71" stroke-width="2.5"/>
-<text x="192.00" y="-175.62" text-anchor="middle" font-size="11">Vorhal</text>
-<text x="192.00" y="-261.38" text-anchor="middle" font-size="10">63</text>
-<clipPath id="hex-3--3"><polygon points="352.00,-166.28 320.00,-110.85 256.00,-110.85 224.00,-166.28 256.00,-221.70 320.00,-221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_15.png" x="224.00" y="-230.28" width="128" height="128" clip-path="url(#hex-3--3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="352.00,-166.28 320.00,-110.85 256.00,-110.85 224.00,-166.28 256.00,-221.70 320.00,-221.70" fill="none" stroke="#2ecc71" stroke-width="6"/>
-<text x="288.00" y="-120.20" text-anchor="middle" font-size="11">Tim</text>
-<text x="288.00" y="-205.96" text-anchor="middle" font-size="10">15</text>
-<clipPath id="hex--1--2"><polygon points="-32.00,-277.13 -64.00,-221.70 -128.00,-221.70 -160.00,-277.13 -128.00,-332.55 -64.00,-332.55"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_21.png" x="-160.00" y="-341.13" width="128" height="128" clip-path="url(#hex--1--2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,-277.13 -64.00,-221.70 -128.00,-221.70 -160.00,-277.13 -128.00,-332.55 -64.00,-332.55" fill="none" stroke="#e67e22" stroke-width="2.5"/>
-<text x="-96.00" y="-231.05" text-anchor="middle" font-size="11">Thibah</text>
-<text x="-96.00" y="-316.81" text-anchor="middle" font-size="10">21</text>
-<clipPath id="hex-0--2"><polygon points="64.00,-221.70 32.00,-166.28 -32.00,-166.28 -64.00,-221.70 -32.00,-277.13 32.00,-277.13"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_34.png" x="-64.00" y="-285.70" width="128" height="128" clip-path="url(#hex-0--2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,-221.70 32.00,-166.28 -32.00,-166.28 -64.00,-221.70 -32.00,-277.13 32.00,-277.13" fill="none" stroke="#e67e22" stroke-width="2.5"/>
-<text x="0.00" y="-175.62" text-anchor="middle" font-size="11">Centauri / Gral</text>
-<text x="0.00" y="-261.38" text-anchor="middle" font-size="10">34</text>
-<clipPath id="hex-1--2"><polygon points="160.00,-166.28 128.00,-110.85 64.00,-110.85 32.00,-166.28 64.00,-221.70 128.00,-221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_115.png" x="32.00" y="-230.28" width="128" height="128" clip-path="url(#hex-1--2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,-166.28 128.00,-110.85 64.00,-110.85 32.00,-166.28 64.00,-221.70 128.00,-221.70" fill="none" stroke="#e67e22" stroke-width="2.5"/>
-<text x="96.00" y="-120.20" text-anchor="middle" font-size="11">Industrex</text>
-<text x="96.00" y="-205.96" text-anchor="middle" font-size="10">115</text>
-<clipPath id="hex-2--2"><polygon points="256.00,-110.85 224.00,-55.43 160.00,-55.43 128.00,-110.85 160.00,-166.28 224.00,-166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_74.png" x="128.00" y="-174.85" width="128" height="128" clip-path="url(#hex-2--2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="256.00,-110.85 224.00,-55.43 160.00,-55.43 128.00,-110.85 160.00,-166.28 224.00,-166.28" fill="none" stroke="#2ecc71" stroke-width="2.5"/>
-<text x="192.00" y="-64.77" text-anchor="middle" font-size="11">Vega Major / Vega </text>
-<text x="192.00" y="-150.53" text-anchor="middle" font-size="10">74</text>
-<clipPath id="hex-3--2"><polygon points="352.00,-55.43 320.00,0.00 256.00,0.00 224.00,-55.43 256.00,-110.85 320.00,-110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_103.png" x="224.00" y="-119.43" width="128" height="128" clip-path="url(#hex-3--2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="352.00,-55.43 320.00,0.00 256.00,0.00 224.00,-55.43 256.00,-110.85 320.00,-110.85" fill="none" stroke="#2ecc71" stroke-width="2.5"/>
-<text x="288.00" y="-9.35" text-anchor="middle" font-size="11">Vira-Pics III</text>
-<text x="288.00" y="-95.11" text-anchor="middle" font-size="10">103</text>
-<clipPath id="hex--2--1"><polygon points="-128.00,-221.70 -160.00,-166.28 -224.00,-166.28 -256.00,-221.70 -224.00,-277.13 -160.00,-277.13"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_24.png" x="-256.00" y="-285.70" width="128" height="128" clip-path="url(#hex--2--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-128.00,-221.70 -160.00,-166.28 -224.00,-166.28 -256.00,-221.70 -224.00,-277.13 -160.00,-277.13" fill="none" stroke="#f1c40f" stroke-width="2.5"/>
-<text x="-192.00" y="-175.62" text-anchor="middle" font-size="11">Mehar Xull</text>
-<text x="-192.00" y="-261.38" text-anchor="middle" font-size="10">24</text>
-<clipPath id="hex--1--1"><polygon points="-32.00,-166.28 -64.00,-110.85 -128.00,-110.85 -160.00,-166.28 -128.00,-221.70 -64.00,-221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_38.png" x="-160.00" y="-230.28" width="128" height="128" clip-path="url(#hex--1--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,-166.28 -64.00,-110.85 -128.00,-110.85 -160.00,-166.28 -128.00,-221.70 -64.00,-221.70" fill="none" stroke="#f1c40f" stroke-width="2.5"/>
-<text x="-96.00" y="-120.20" text-anchor="middle" font-size="11">Abyz / Fria</text>
-<text x="-96.00" y="-205.96" text-anchor="middle" font-size="10">38</text>
-<clipPath id="hex-0--1"><polygon points="64.00,-110.85 32.00,-55.43 -32.00,-55.43 -64.00,-110.85 -32.00,-166.28 32.00,-166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_48.png" x="-64.00" y="-174.85" width="128" height="128" clip-path="url(#hex-0--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,-110.85 32.00,-55.43 -32.00,-55.43 -64.00,-110.85 -32.00,-166.28 32.00,-166.28" fill="none" stroke="#e67e22" stroke-width="2.5"/>
-<text x="0.00" y="-64.77" text-anchor="middle" font-size="11">Empty space</text>
-<text x="0.00" y="-150.53" text-anchor="middle" font-size="10">48</text>
-<clipPath id="hex-1--1"><polygon points="160.00,-55.43 128.00,0.00 64.00,0.00 32.00,-55.43 64.00,-110.85 128.00,-110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_40.png" x="32.00" y="-119.43" width="128" height="128" clip-path="url(#hex-1--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,-55.43 128.00,0.00 64.00,0.00 32.00,-55.43 64.00,-110.85 128.00,-110.85" fill="none" stroke="#2ecc71" stroke-width="2.5"/>
-<text x="96.00" y="-9.35" text-anchor="middle" font-size="11">beta wormhole</text>
-<text x="96.00" y="-95.11" text-anchor="middle" font-size="10">40</text>
-<clipPath id="hex-2--1"><polygon points="256.00,0.00 224.00,55.43 160.00,55.43 128.00,0.00 160.00,-55.43 224.00,-55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_117.png" x="128.00" y="-64.00" width="128" height="128" clip-path="url(#hex-2--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="256.00,0.00 224.00,55.43 160.00,55.43 128.00,0.00 160.00,-55.43 224.00,-55.43" fill="none" stroke="#2ecc71" stroke-width="2.5"/>
-<text x="192.00" y="46.08" text-anchor="middle" font-size="11">The Watchtower</text>
-<text x="192.00" y="-39.68" text-anchor="middle" font-size="10">117</text>
-<clipPath id="hex-3--1"><polygon points="352.00,55.43 320.00,110.85 256.00,110.85 224.00,55.43 256.00,0.00 320.00,0.00"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_104.png" x="224.00" y="-8.57" width="128" height="128" clip-path="url(#hex-3--1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="352.00,55.43 320.00,110.85 256.00,110.85 224.00,55.43 256.00,0.00 320.00,0.00" fill="none" stroke="#5dade2" stroke-width="2.5"/>
-<text x="288.00" y="101.51" text-anchor="middle" font-size="11">Lesab</text>
-<text x="288.00" y="15.75" text-anchor="middle" font-size="10">104</text>
-<clipPath id="hex--3-0"><polygon points="-224.00,-166.28 -256.00,-110.85 -320.00,-110.85 -352.00,-166.28 -320.00,-221.70 -256.00,-221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_10.png" x="-352.00" y="-230.28" width="128" height="128" clip-path="url(#hex--3-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-224.00,-166.28 -256.00,-110.85 -320.00,-110.85 -352.00,-166.28 -320.00,-221.70 -256.00,-221.70" fill="none" stroke="#f1c40f" stroke-width="6"/>
-<text x="-288.00" y="-120.20" text-anchor="middle" font-size="11">Ruben</text>
-<text x="-288.00" y="-205.96" text-anchor="middle" font-size="10">10</text>
-<clipPath id="hex--2-0"><polygon points="-128.00,-110.85 -160.00,-55.43 -224.00,-55.43 -256.00,-110.85 -224.00,-166.28 -160.00,-166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_76.png" x="-256.00" y="-174.85" width="128" height="128" clip-path="url(#hex--2-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-128.00,-110.85 -160.00,-55.43 -224.00,-55.43 -256.00,-110.85 -224.00,-166.28 -160.00,-166.28" fill="none" stroke="#f1c40f" stroke-width="2.5"/>
-<text x="-192.00" y="-64.77" text-anchor="middle" font-size="11">Rigel I / Rigel II</text>
-<text x="-192.00" y="-150.53" text-anchor="middle" font-size="10">76</text>
-<clipPath id="hex--1-0"><polygon points="-32.00,-55.43 -64.00,0.00 -128.00,0.00 -160.00,-55.43 -128.00,-110.85 -64.00,-110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_79.png" x="-160.00" y="-119.43" width="128" height="128" clip-path="url(#hex--1-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,-55.43 -64.00,0.00 -128.00,0.00 -160.00,-55.43 -128.00,-110.85 -64.00,-110.85" fill="none" stroke="#f1c40f" stroke-width="2.5"/>
-<text x="-96.00" y="-9.35" text-anchor="middle" font-size="11">asteroid-field</text>
-<text x="-96.00" y="-95.11" text-anchor="middle" font-size="10">79</text>
-<clipPath id="hex-0-0"><polygon points="64.00,0.00 32.00,55.43 -32.00,55.43 -64.00,0.00 -32.00,-55.43 32.00,-55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_112.png" x="-64.00" y="-64.00" width="128" height="128" clip-path="url(#hex-0-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,0.00 32.00,55.43 -32.00,55.43 -64.00,0.00 -32.00,-55.43 32.00,-55.43" fill="none" stroke="#f4d03f" stroke-width="6"/>
-<text x="0.00" y="46.08" text-anchor="middle" font-size="11">Mecatol Rex</text>
-<text x="0.00" y="-39.68" text-anchor="middle" font-size="10">112</text>
-<clipPath id="hex-1-0"><polygon points="160.00,55.43 128.00,110.85 64.00,110.85 32.00,55.43 64.00,0.00 128.00,0.00"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_116.png" x="32.00" y="-8.57" width="128" height="128" clip-path="url(#hex-1-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,55.43 128.00,110.85 64.00,110.85 32.00,55.43 64.00,0.00 128.00,0.00" fill="none" stroke="#5dade2" stroke-width="2.5"/>
-<text x="96.00" y="101.51" text-anchor="middle" font-size="11">Lemox</text>
-<text x="96.00" y="15.75" text-anchor="middle" font-size="10">116</text>
-<clipPath id="hex-2-0"><polygon points="256.00,110.85 224.00,166.28 160.00,166.28 128.00,110.85 160.00,55.43 224.00,55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_26.png" x="128.00" y="46.85" width="128" height="128" clip-path="url(#hex-2-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="256.00,110.85 224.00,166.28 160.00,166.28 128.00,110.85 160.00,55.43 224.00,55.43" fill="none" stroke="#5dade2" stroke-width="2.5"/>
-<text x="192.00" y="156.93" text-anchor="middle" font-size="11">Lodor</text>
-<text x="192.00" y="71.17" text-anchor="middle" font-size="10">26</text>
-<clipPath id="hex-3-0"><polygon points="352.00,166.28 320.00,221.70 256.00,221.70 224.00,166.28 256.00,110.85 320.00,110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_17.png" x="224.00" y="102.28" width="128" height="128" clip-path="url(#hex-3-0)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="352.00,166.28 320.00,221.70 256.00,221.70 224.00,166.28 256.00,110.85 320.00,110.85" fill="none" stroke="#5dade2" stroke-width="6"/>
-<text x="288.00" y="212.36" text-anchor="middle" font-size="11">Jochem</text>
-<text x="288.00" y="126.60" text-anchor="middle" font-size="10">17</text>
-<clipPath id="hex--3-1"><polygon points="-224.00,-55.43 -256.00,-0.00 -320.00,-0.00 -352.00,-55.43 -320.00,-110.85 -256.00,-110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_42.png" x="-352.00" y="-119.43" width="128" height="128" clip-path="url(#hex--3-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-224.00,-55.43 -256.00,-0.00 -320.00,-0.00 -352.00,-55.43 -320.00,-110.85 -256.00,-110.85" fill="none" stroke="#f1c40f" stroke-width="2.5"/>
-<text x="-288.00" y="-9.35" text-anchor="middle" font-size="11">nebula</text>
-<text x="-288.00" y="-95.11" text-anchor="middle" font-size="10">42</text>
-<clipPath id="hex--2-1"><polygon points="-128.00,0.00 -160.00,55.43 -224.00,55.43 -256.00,0.00 -224.00,-55.43 -160.00,-55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_69.png" x="-256.00" y="-64.00" width="128" height="128" clip-path="url(#hex--2-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-128.00,0.00 -160.00,55.43 -224.00,55.43 -256.00,0.00 -224.00,-55.43 -160.00,-55.43" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
-<text x="-192.00" y="46.08" text-anchor="middle" font-size="11">Accoen / Jeol Ir</text>
-<text x="-192.00" y="-39.68" text-anchor="middle" font-size="10">69</text>
-<clipPath id="hex--1-1"><polygon points="-32.00,55.43 -64.00,110.85 -128.00,110.85 -160.00,55.43 -128.00,0.00 -64.00,0.00"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_43.png" x="-160.00" y="-8.57" width="128" height="128" clip-path="url(#hex--1-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,55.43 -64.00,110.85 -128.00,110.85 -160.00,55.43 -128.00,0.00 -64.00,0.00" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
-<text x="-96.00" y="101.51" text-anchor="middle" font-size="11">supernova</text>
-<text x="-96.00" y="15.75" text-anchor="middle" font-size="10">43</text>
-<clipPath id="hex-0-1"><polygon points="64.00,110.85 32.00,166.28 -32.00,166.28 -64.00,110.85 -32.00,55.43 32.00,55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_68.png" x="-64.00" y="46.85" width="128" height="128" clip-path="url(#hex-0-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,110.85 32.00,166.28 -32.00,166.28 -64.00,110.85 -32.00,55.43 32.00,55.43" fill="none" stroke="#e84393" stroke-width="2.5"/>
-<text x="0.00" y="156.93" text-anchor="middle" font-size="11">Everra</text>
-<text x="0.00" y="71.17" text-anchor="middle" font-size="10">68</text>
-<clipPath id="hex-1-1"><polygon points="160.00,166.28 128.00,221.70 64.00,221.70 32.00,166.28 64.00,110.85 128.00,110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_77.png" x="32.00" y="102.28" width="128" height="128" clip-path="url(#hex-1-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,166.28 128.00,221.70 64.00,221.70 32.00,166.28 64.00,110.85 128.00,110.85" fill="none" stroke="#5dade2" stroke-width="2.5"/>
-<text x="96.00" y="212.36" text-anchor="middle" font-size="11">Empty space</text>
-<text x="96.00" y="126.60" text-anchor="middle" font-size="10">77</text>
-<clipPath id="hex-2-1"><polygon points="256.00,221.70 224.00,277.13 160.00,277.13 128.00,221.70 160.00,166.28 224.00,166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_36.png" x="128.00" y="157.70" width="128" height="128" clip-path="url(#hex-2-1)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="256.00,221.70 224.00,277.13 160.00,277.13 128.00,221.70 160.00,166.28 224.00,166.28" fill="none" stroke="#5dade2" stroke-width="2.5"/>
-<text x="192.00" y="267.78" text-anchor="middle" font-size="11">Arnor / Lor</text>
-<text x="192.00" y="182.02" text-anchor="middle" font-size="10">36</text>
-<clipPath id="hex--3-2"><polygon points="-224.00,55.43 -256.00,110.85 -320.00,110.85 -352.00,55.43 -320.00,0.00 -256.00,-0.00"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_100.png" x="-352.00" y="-8.57" width="128" height="128" clip-path="url(#hex--3-2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-224.00,55.43 -256.00,110.85 -320.00,110.85 -352.00,55.43 -320.00,0.00 -256.00,-0.00" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
-<text x="-288.00" y="101.51" text-anchor="middle" font-size="11">Tempesta</text>
-<text x="-288.00" y="15.75" text-anchor="middle" font-size="10">100</text>
-<clipPath id="hex--2-2"><polygon points="-128.00,110.85 -160.00,166.28 -224.00,166.28 -256.00,110.85 -224.00,55.43 -160.00,55.43"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_64.png" x="-256.00" y="46.85" width="128" height="128" clip-path="url(#hex--2-2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-128.00,110.85 -160.00,166.28 -224.00,166.28 -256.00,110.85 -224.00,55.43 -160.00,55.43" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
-<text x="-192.00" y="156.93" text-anchor="middle" font-size="11">Atlas</text>
-<text x="-192.00" y="71.17" text-anchor="middle" font-size="10">64</text>
-<clipPath id="hex--1-2"><polygon points="-32.00,166.28 -64.00,221.70 -128.00,221.70 -160.00,166.28 -128.00,110.85 -64.00,110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_97.png" x="-160.00" y="102.28" width="128" height="128" clip-path="url(#hex--1-2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,166.28 -64.00,221.70 -128.00,221.70 -160.00,166.28 -128.00,110.85 -64.00,110.85" fill="none" stroke="#e84393" stroke-width="2.5"/>
-<text x="-96.00" y="212.36" text-anchor="middle" font-size="11">Paunus</text>
-<text x="-96.00" y="126.60" text-anchor="middle" font-size="10">97</text>
-<clipPath id="hex-0-2"><polygon points="64.00,221.70 32.00,277.13 -32.00,277.13 -64.00,221.70 -32.00,166.28 32.00,166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_109.png" x="-64.00" y="157.70" width="128" height="128" clip-path="url(#hex-0-2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,221.70 32.00,277.13 -32.00,277.13 -64.00,221.70 -32.00,166.28 32.00,166.28" fill="none" stroke="#e84393" stroke-width="2.5"/>
-<text x="0.00" y="267.78" text-anchor="middle" font-size="11">Bellatrix / Tsion </text>
-<text x="0.00" y="182.02" text-anchor="middle" font-size="10">109</text>
-<clipPath id="hex-1-2"><polygon points="160.00,277.13 128.00,332.55 64.00,332.55 32.00,277.13 64.00,221.70 128.00,221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_114.png" x="32.00" y="213.13" width="128" height="128" clip-path="url(#hex-1-2)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="160.00,277.13 128.00,332.55 64.00,332.55 32.00,277.13 64.00,221.70 128.00,221.70" fill="none" stroke="#e84393" stroke-width="2.5"/>
-<text x="96.00" y="323.21" text-anchor="middle" font-size="11">entropic scar</text>
-<text x="96.00" y="237.45" text-anchor="middle" font-size="10">114</text>
-<clipPath id="hex--3-3"><polygon points="-224.00,166.28 -256.00,221.70 -320.00,221.70 -352.00,166.28 -320.00,110.85 -256.00,110.85"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_56.png" x="-352.00" y="102.28" width="128" height="128" clip-path="url(#hex--3-3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-224.00,166.28 -256.00,221.70 -320.00,221.70 -352.00,166.28 -320.00,110.85 -256.00,110.85" fill="none" stroke="#9b59b6" stroke-width="6"/>
-<text x="-288.00" y="212.36" text-anchor="middle" font-size="11">Paul</text>
-<text x="-288.00" y="126.60" text-anchor="middle" font-size="10">56</text>
-<clipPath id="hex--2-3"><polygon points="-128.00,221.70 -160.00,277.13 -224.00,277.13 -256.00,221.70 -224.00,166.28 -160.00,166.28"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_80.png" x="-256.00" y="157.70" width="128" height="128" clip-path="url(#hex--2-3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-128.00,221.70 -160.00,277.13 -224.00,277.13 -256.00,221.70 -224.00,166.28 -160.00,166.28" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
-<text x="-192.00" y="267.78" text-anchor="middle" font-size="11">supernova</text>
-<text x="-192.00" y="182.02" text-anchor="middle" font-size="10">80</text>
-<clipPath id="hex--1-3"><polygon points="-32.00,277.13 -64.00,332.55 -128.00,332.55 -160.00,277.13 -128.00,221.70 -64.00,221.70"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_22.png" x="-160.00" y="213.13" width="128" height="128" clip-path="url(#hex--1-3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="-32.00,277.13 -64.00,332.55 -128.00,332.55 -160.00,277.13 -128.00,221.70 -64.00,221.70" fill="none" stroke="#e84393" stroke-width="2.5"/>
-<text x="-96.00" y="323.21" text-anchor="middle" font-size="11">Tar'mann</text>
-<text x="-96.00" y="237.45" text-anchor="middle" font-size="10">22</text>
-<clipPath id="hex-0-3"><polygon points="64.00,332.55 32.00,387.98 -32.00,387.98 -64.00,332.55 -32.00,277.13 32.00,277.13"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_55.png" x="-64.00" y="268.55" width="128" height="128" clip-path="url(#hex-0-3)" preserveAspectRatio="xMidYMid slice"/>
-<polygon points="64.00,332.55 32.00,387.98 -32.00,387.98 -64.00,332.55 -32.00,277.13 32.00,277.13" fill="none" stroke="#e84393" stroke-width="6"/>
-<text x="0.00" y="378.63" text-anchor="middle" font-size="11">Sander</text>
-<text x="0.00" y="292.87" text-anchor="middle" font-size="10">55</text>
+<rect x="-174.0" y="-174.0" width="1116.0" height="1290.2356393174691" fill="#0b1020"/>
+<clipPath id="hex-4-0"><polygon points="448.00,0.00 416.00,55.43 352.00,55.43 320.00,0.00 352.00,-55.43 416.00,-55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_29.png" x="320.00" y="-55.43" width="128.00" height="110.85" transform="rotate(0 384.00 0.00)" clip-path="url(#hex-4-0)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,0.00 416.00,55.43 352.00,55.43 320.00,0.00 352.00,-55.43 416.00,-55.43" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="-35.20" text-anchor="middle" font-size="12">29</text>
+<clipPath id="hex-5-0"><polygon points="544.00,55.43 512.00,110.85 448.00,110.85 416.00,55.43 448.00,0.00 512.00,0.00"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_80.png" x="416.00" y="0.00" width="128.00" height="110.85" transform="rotate(0 480.00 55.43)" clip-path="url(#hex-5-0)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,55.43 512.00,110.85 448.00,110.85 416.00,55.43 448.00,0.00 512.00,0.00" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="20.23" text-anchor="middle" font-size="12">80</text>
+<clipPath id="hex-6-0"><polygon points="640.00,0.00 608.00,55.43 544.00,55.43 512.00,0.00 544.00,-55.43 608.00,-55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_50.png" x="512.00" y="-55.43" width="128.00" height="110.85" transform="rotate(0 576.00 0.00)" clip-path="url(#hex-6-0)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,0.00 608.00,55.43 544.00,55.43 512.00,0.00 544.00,-55.43 608.00,-55.43" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="-35.20" text-anchor="middle" font-size="12">50</text>
+<clipPath id="hex-7-0"><polygon points="736.00,55.43 704.00,110.85 640.00,110.85 608.00,55.43 640.00,0.00 704.00,0.00"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_67.png" x="608.00" y="0.00" width="128.00" height="110.85" transform="rotate(0 672.00 55.43)" clip-path="url(#hex-7-0)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,55.43 704.00,110.85 640.00,110.85 608.00,55.43 640.00,0.00 704.00,0.00" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="20.23" text-anchor="middle" font-size="12">67</text>
+<clipPath id="hex-8-0"><polygon points="832.00,0.00 800.00,55.43 736.00,55.43 704.00,0.00 736.00,-55.43 800.00,-55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_33.png" x="704.00" y="-55.43" width="128.00" height="110.85" transform="rotate(0 768.00 0.00)" clip-path="url(#hex-8-0)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="832.00,0.00 800.00,55.43 736.00,55.43 704.00,0.00 736.00,-55.43 800.00,-55.43" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="768.00" y="-35.20" text-anchor="middle" font-size="12">33</text>
+<clipPath id="hex-3-1"><polygon points="352.00,166.28 320.00,221.70 256.00,221.70 224.00,166.28 256.00,110.85 320.00,110.85"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_91B.png" x="224.00" y="110.85" width="128.00" height="110.85" transform="rotate(60 288.00 166.28)" clip-path="url(#hex-3-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,166.28 320.00,221.70 256.00,221.70 224.00,166.28 256.00,110.85 320.00,110.85" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="131.08" text-anchor="middle" font-size="12">91B</text>
+<clipPath id="hex-4-1"><polygon points="448.00,110.85 416.00,166.28 352.00,166.28 320.00,110.85 352.00,55.43 416.00,55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="320.00" y="55.43" width="128.00" height="110.85" transform="rotate(0 384.00 110.85)" clip-path="url(#hex-4-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,110.85 416.00,166.28 352.00,166.28 320.00,110.85 352.00,55.43 416.00,55.43" fill="none" stroke="#1abc9c" stroke-width="6"/>
+<text x="384.00" y="156.93" text-anchor="middle" font-size="11">Non-Euclidean</text>
+<text x="384.00" y="75.65" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-5-1"><polygon points="544.00,166.28 512.00,221.70 448.00,221.70 416.00,166.28 448.00,110.85 512.00,110.85"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_88B.png" x="416.00" y="110.85" width="128.00" height="110.85" transform="rotate(120 480.00 166.28)" clip-path="url(#hex-5-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,166.28 512.00,221.70 448.00,221.70 416.00,166.28 448.00,110.85 512.00,110.85" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="131.08" text-anchor="middle" font-size="12">88B</text>
+<clipPath id="hex-6-1"><polygon points="640.00,110.85 608.00,166.28 544.00,166.28 512.00,110.85 544.00,55.43 608.00,55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_26.png" x="512.00" y="55.43" width="128.00" height="110.85" transform="rotate(0 576.00 110.85)" clip-path="url(#hex-6-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,110.85 608.00,166.28 544.00,166.28 512.00,110.85 544.00,55.43 608.00,55.43" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="75.65" text-anchor="middle" font-size="12">26</text>
+<clipPath id="hex-7-1"><polygon points="736.00,166.28 704.00,221.70 640.00,221.70 608.00,166.28 640.00,110.85 704.00,110.85"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_44.png" x="608.00" y="110.85" width="128.00" height="110.85" transform="rotate(0 672.00 166.28)" clip-path="url(#hex-7-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,166.28 704.00,221.70 640.00,221.70 608.00,166.28 640.00,110.85 704.00,110.85" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="131.08" text-anchor="middle" font-size="12">44</text>
+<clipPath id="hex-8-1"><polygon points="832.00,110.85 800.00,166.28 736.00,166.28 704.00,110.85 736.00,55.43 800.00,55.43"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="704.00" y="55.43" width="128.00" height="110.85" transform="rotate(0 768.00 110.85)" clip-path="url(#hex-8-1)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="832.00,110.85 800.00,166.28 736.00,166.28 704.00,110.85 736.00,55.43 800.00,55.43" fill="none" stroke="#e74c3c" stroke-width="6"/>
+<text x="768.00" y="156.93" text-anchor="middle" font-size="11">Pain Train</text>
+<text x="768.00" y="75.65" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-2-2"><polygon points="256.00,221.70 224.00,277.13 160.00,277.13 128.00,221.70 160.00,166.28 224.00,166.28"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_28.png" x="128.00" y="166.28" width="128.00" height="110.85" transform="rotate(0 192.00 221.70)" clip-path="url(#hex-2-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,221.70 224.00,277.13 160.00,277.13 128.00,221.70 160.00,166.28 224.00,166.28" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="186.50" text-anchor="middle" font-size="12">28</text>
+<clipPath id="hex-3-2"><polygon points="352.00,277.13 320.00,332.55 256.00,332.55 224.00,277.13 256.00,221.70 320.00,221.70"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_45.png" x="224.00" y="221.70" width="128.00" height="110.85" transform="rotate(0 288.00 277.13)" clip-path="url(#hex-3-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,277.13 320.00,332.55 256.00,332.55 224.00,277.13 256.00,221.70 320.00,221.70" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="241.93" text-anchor="middle" font-size="12">45</text>
+<clipPath id="hex-4-2"><polygon points="448.00,221.70 416.00,277.13 352.00,277.13 320.00,221.70 352.00,166.28 416.00,166.28"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_62.png" x="320.00" y="166.28" width="128.00" height="110.85" transform="rotate(0 384.00 221.70)" clip-path="url(#hex-4-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,221.70 416.00,277.13 352.00,277.13 320.00,221.70 352.00,166.28 416.00,166.28" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="186.50" text-anchor="middle" font-size="12">62</text>
+<clipPath id="hex-5-2"><polygon points="544.00,277.13 512.00,332.55 448.00,332.55 416.00,277.13 448.00,221.70 512.00,221.70"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_42.png" x="416.00" y="221.70" width="128.00" height="110.85" transform="rotate(0 480.00 277.13)" clip-path="url(#hex-5-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,277.13 512.00,332.55 448.00,332.55 416.00,277.13 448.00,221.70 512.00,221.70" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="241.93" text-anchor="middle" font-size="12">42</text>
+<clipPath id="hex-6-2"><polygon points="640.00,221.70 608.00,277.13 544.00,277.13 512.00,221.70 544.00,166.28 608.00,166.28"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_90B.png" x="512.00" y="166.28" width="128.00" height="110.85" transform="rotate(60 576.00 221.70)" clip-path="url(#hex-6-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,221.70 608.00,277.13 544.00,277.13 512.00,221.70 544.00,166.28 608.00,166.28" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="186.50" text-anchor="middle" font-size="12">90B</text>
+<clipPath id="hex-7-2"><polygon points="736.00,277.13 704.00,332.55 640.00,332.55 608.00,277.13 640.00,221.70 704.00,221.70"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_37.png" x="608.00" y="221.70" width="128.00" height="110.85" transform="rotate(0 672.00 277.13)" clip-path="url(#hex-7-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,277.13 704.00,332.55 640.00,332.55 608.00,277.13 640.00,221.70 704.00,221.70" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="241.93" text-anchor="middle" font-size="12">37</text>
+<clipPath id="hex-8-2"><polygon points="832.00,221.70 800.00,277.13 736.00,277.13 704.00,221.70 736.00,166.28 800.00,166.28"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_22.png" x="704.00" y="166.28" width="128.00" height="110.85" transform="rotate(0 768.00 221.70)" clip-path="url(#hex-8-2)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="832.00,221.70 800.00,277.13 736.00,277.13 704.00,221.70 736.00,166.28 800.00,166.28" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="768.00" y="186.50" text-anchor="middle" font-size="12">22</text>
+<clipPath id="hex-1-3"><polygon points="160.00,387.98 128.00,443.41 64.00,443.41 32.00,387.98 64.00,332.55 128.00,332.55"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="32.00" y="332.55" width="128.00" height="110.85" transform="rotate(0 96.00 387.98)" clip-path="url(#hex-1-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,387.98 128.00,443.41 64.00,443.41 32.00,387.98 64.00,332.55 128.00,332.55" fill="none" stroke="#5dade2" stroke-width="6"/>
+<text x="96.00" y="434.06" text-anchor="middle" font-size="11">Ambassador</text>
+<text x="96.00" y="352.78" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-2-3"><polygon points="256.00,332.55 224.00,387.98 160.00,387.98 128.00,332.55 160.00,277.13 224.00,277.13"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_64.png" x="128.00" y="277.13" width="128.00" height="110.85" transform="rotate(0 192.00 332.55)" clip-path="url(#hex-2-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,332.55 224.00,387.98 160.00,387.98 128.00,332.55 160.00,277.13 224.00,277.13" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="297.35" text-anchor="middle" font-size="12">64</text>
+<clipPath id="hex-3-3"><polygon points="352.00,387.98 320.00,443.41 256.00,443.41 224.00,387.98 256.00,332.55 320.00,332.55"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_75.png" x="224.00" y="332.55" width="128.00" height="110.85" transform="rotate(0 288.00 387.98)" clip-path="url(#hex-3-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,387.98 320.00,443.41 256.00,443.41 224.00,387.98 256.00,332.55 320.00,332.55" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="352.78" text-anchor="middle" font-size="12">75</text>
+<clipPath id="hex-4-3"><polygon points="448.00,332.55 416.00,387.98 352.00,387.98 320.00,332.55 352.00,277.13 416.00,277.13"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_70.png" x="320.00" y="277.13" width="128.00" height="110.85" transform="rotate(0 384.00 332.55)" clip-path="url(#hex-4-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,332.55 416.00,387.98 352.00,387.98 320.00,332.55 352.00,277.13 416.00,277.13" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="297.35" text-anchor="middle" font-size="12">70</text>
+<clipPath id="hex-5-3"><polygon points="544.00,387.98 512.00,443.41 448.00,443.41 416.00,387.98 448.00,332.55 512.00,332.55"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_84A.png" x="416.00" y="332.55" width="128.00" height="110.85" transform="rotate(120 480.00 387.98)" clip-path="url(#hex-5-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,387.98 512.00,443.41 448.00,443.41 416.00,387.98 448.00,332.55 512.00,332.55" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="352.78" text-anchor="middle" font-size="12">84A</text>
+<clipPath id="hex-6-3"><polygon points="640.00,332.55 608.00,387.98 544.00,387.98 512.00,332.55 544.00,277.13 608.00,277.13"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_36.png" x="512.00" y="277.13" width="128.00" height="110.85" transform="rotate(0 576.00 332.55)" clip-path="url(#hex-6-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,332.55 608.00,387.98 544.00,387.98 512.00,332.55 544.00,277.13 608.00,277.13" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="297.35" text-anchor="middle" font-size="12">36</text>
+<clipPath id="hex-7-3"><polygon points="736.00,387.98 704.00,443.41 640.00,443.41 608.00,387.98 640.00,332.55 704.00,332.55"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_66.png" x="608.00" y="332.55" width="128.00" height="110.85" transform="rotate(0 672.00 387.98)" clip-path="url(#hex-7-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,387.98 704.00,443.41 640.00,443.41 608.00,387.98 640.00,332.55 704.00,332.55" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="352.78" text-anchor="middle" font-size="12">66</text>
+<clipPath id="hex-8-3"><polygon points="832.00,332.55 800.00,387.98 736.00,387.98 704.00,332.55 736.00,277.13 800.00,277.13"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_87B.png" x="704.00" y="277.13" width="128.00" height="110.85" transform="rotate(180 768.00 332.55)" clip-path="url(#hex-8-3)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="832.00,332.55 800.00,387.98 736.00,387.98 704.00,332.55 736.00,277.13 800.00,277.13" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="768.00" y="297.35" text-anchor="middle" font-size="12">87B</text>
+<clipPath id="hex-0-4"><polygon points="64.00,443.41 32.00,498.83 -32.00,498.83 -64.00,443.41 -32.00,387.98 32.00,387.98"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_24.png" x="-64.00" y="387.98" width="128.00" height="110.85" transform="rotate(0 0.00 443.41)" clip-path="url(#hex-0-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="64.00,443.41 32.00,498.83 -32.00,498.83 -64.00,443.41 -32.00,387.98 32.00,387.98" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="0.00" y="408.21" text-anchor="middle" font-size="12">24</text>
+<clipPath id="hex-1-4"><polygon points="160.00,498.83 128.00,554.26 64.00,554.26 32.00,498.83 64.00,443.41 128.00,443.41"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_49.png" x="32.00" y="443.41" width="128.00" height="110.85" transform="rotate(0 96.00 498.83)" clip-path="url(#hex-1-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,498.83 128.00,554.26 64.00,554.26 32.00,498.83 64.00,443.41 128.00,443.41" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="96.00" y="463.63" text-anchor="middle" font-size="12">49</text>
+<clipPath id="hex-2-4"><polygon points="256.00,443.41 224.00,498.83 160.00,498.83 128.00,443.41 160.00,387.98 224.00,387.98"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_74.png" x="128.00" y="387.98" width="128.00" height="110.85" transform="rotate(0 192.00 443.41)" clip-path="url(#hex-2-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,443.41 224.00,498.83 160.00,498.83 128.00,443.41 160.00,387.98 224.00,387.98" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="408.21" text-anchor="middle" font-size="12">74</text>
+<clipPath id="hex-3-4"><polygon points="352.00,498.83 320.00,554.26 256.00,554.26 224.00,498.83 256.00,443.41 320.00,443.41"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="224.00" y="443.41" width="128.00" height="110.85" transform="rotate(0 288.00 498.83)" clip-path="url(#hex-3-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,498.83 320.00,554.26 256.00,554.26 224.00,498.83 256.00,443.41 320.00,443.41" fill="none" stroke="#f39c12" stroke-width="6"/>
+<text x="288.00" y="544.91" text-anchor="middle" font-size="11">Why Can't I Hold All</text>
+<text x="288.00" y="463.63" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-4-4"><polygon points="448.00,443.41 416.00,498.83 352.00,498.83 320.00,443.41 352.00,387.98 416.00,387.98"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_85A.png" x="320.00" y="387.98" width="128.00" height="110.85" transform="rotate(120 384.00 443.41)" clip-path="url(#hex-4-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,443.41 416.00,498.83 352.00,498.83 320.00,443.41 352.00,387.98 416.00,387.98" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="408.21" text-anchor="middle" font-size="12">85A</text>
+<clipPath id="hex-5-4"><polygon points="544.00,498.83 512.00,554.26 448.00,554.26 416.00,498.83 448.00,443.41 512.00,443.41"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="416.00" y="443.41" width="128.00" height="110.85" transform="rotate(0 480.00 498.83)" clip-path="url(#hex-5-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,498.83 512.00,554.26 448.00,554.26 416.00,498.83 448.00,443.41 512.00,443.41" fill="none" stroke="#27ae60" stroke-width="6"/>
+<text x="480.00" y="544.91" text-anchor="middle" font-size="11">Mountain Fortress</text>
+<text x="480.00" y="463.63" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-6-4"><polygon points="640.00,443.41 608.00,498.83 544.00,498.83 512.00,443.41 544.00,387.98 608.00,387.98"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_27.png" x="512.00" y="387.98" width="128.00" height="110.85" transform="rotate(0 576.00 443.41)" clip-path="url(#hex-6-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,443.41 608.00,498.83 544.00,498.83 512.00,443.41 544.00,387.98 608.00,387.98" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="408.21" text-anchor="middle" font-size="12">27</text>
+<clipPath id="hex-7-4"><polygon points="736.00,498.83 704.00,554.26 640.00,554.26 608.00,498.83 640.00,443.41 704.00,443.41"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_25.png" x="608.00" y="443.41" width="128.00" height="110.85" transform="rotate(0 672.00 498.83)" clip-path="url(#hex-7-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,498.83 704.00,554.26 640.00,554.26 608.00,498.83 640.00,443.41 704.00,443.41" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="463.63" text-anchor="middle" font-size="12">25</text>
+<clipPath id="hex-8-4"><polygon points="832.00,443.41 800.00,498.83 736.00,498.83 704.00,443.41 736.00,387.98 800.00,387.98"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_86A.png" x="704.00" y="387.98" width="128.00" height="110.85" transform="rotate(300 768.00 443.41)" clip-path="url(#hex-8-4)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="832.00,443.41 800.00,498.83 736.00,498.83 704.00,443.41 736.00,387.98 800.00,387.98" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="768.00" y="408.21" text-anchor="middle" font-size="12">86A</text>
+<clipPath id="hex-0-5"><polygon points="64.00,554.26 32.00,609.68 -32.00,609.68 -64.00,554.26 -32.00,498.83 32.00,498.83"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_72.png" x="-64.00" y="498.83" width="128.00" height="110.85" transform="rotate(0 0.00 554.26)" clip-path="url(#hex-0-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="64.00,554.26 32.00,609.68 -32.00,609.68 -64.00,554.26 -32.00,498.83 32.00,498.83" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="0.00" y="519.06" text-anchor="middle" font-size="12">72</text>
+<clipPath id="hex-1-5"><polygon points="160.00,609.68 128.00,665.11 64.00,665.11 32.00,609.68 64.00,554.26 128.00,554.26"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_79.png" x="32.00" y="554.26" width="128.00" height="110.85" transform="rotate(0 96.00 609.68)" clip-path="url(#hex-1-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,609.68 128.00,665.11 64.00,665.11 32.00,609.68 64.00,554.26 128.00,554.26" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="96.00" y="574.48" text-anchor="middle" font-size="12">79</text>
+<clipPath id="hex-2-5"><polygon points="256.00,554.26 224.00,609.68 160.00,609.68 128.00,554.26 160.00,498.83 224.00,498.83"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_76.png" x="128.00" y="498.83" width="128.00" height="110.85" transform="rotate(0 192.00 554.26)" clip-path="url(#hex-2-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,554.26 224.00,609.68 160.00,609.68 128.00,554.26 160.00,498.83 224.00,498.83" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="519.06" text-anchor="middle" font-size="12">76</text>
+<clipPath id="hex-3-5"><polygon points="352.00,609.68 320.00,665.11 256.00,665.11 224.00,609.68 256.00,554.26 320.00,554.26"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_69.png" x="224.00" y="554.26" width="128.00" height="110.85" transform="rotate(0 288.00 609.68)" clip-path="url(#hex-3-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,609.68 320.00,665.11 256.00,665.11 224.00,609.68 256.00,554.26 320.00,554.26" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="574.48" text-anchor="middle" font-size="12">69</text>
+<clipPath id="hex-4-5"><polygon points="448.00,554.26 416.00,609.68 352.00,609.68 320.00,554.26 352.00,498.83 416.00,498.83"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_83A.png" x="320.00" y="498.83" width="128.00" height="110.85" transform="rotate(120 384.00 554.26)" clip-path="url(#hex-4-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,554.26 416.00,609.68 352.00,609.68 320.00,554.26 352.00,498.83 416.00,498.83" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="519.06" text-anchor="middle" font-size="12">83A</text>
+<clipPath id="hex-5-5"><polygon points="544.00,609.68 512.00,665.11 448.00,665.11 416.00,609.68 448.00,554.26 512.00,554.26"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_34.png" x="416.00" y="554.26" width="128.00" height="110.85" transform="rotate(0 480.00 609.68)" clip-path="url(#hex-5-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,609.68 512.00,665.11 448.00,665.11 416.00,609.68 448.00,554.26 512.00,554.26" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="574.48" text-anchor="middle" font-size="12">34</text>
+<clipPath id="hex-6-5"><polygon points="640.00,554.26 608.00,609.68 544.00,609.68 512.00,554.26 544.00,498.83 608.00,498.83"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_43.png" x="512.00" y="498.83" width="128.00" height="110.85" transform="rotate(0 576.00 554.26)" clip-path="url(#hex-6-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,554.26 608.00,609.68 544.00,609.68 512.00,554.26 544.00,498.83 608.00,498.83" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="576.00" y="519.06" text-anchor="middle" font-size="12">43</text>
+<clipPath id="hex-7-5"><polygon points="736.00,609.68 704.00,665.11 640.00,665.11 608.00,609.68 640.00,554.26 704.00,554.26"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_73.png" x="608.00" y="554.26" width="128.00" height="110.85" transform="rotate(0 672.00 609.68)" clip-path="url(#hex-7-5)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="736.00,609.68 704.00,665.11 640.00,665.11 608.00,609.68 640.00,554.26 704.00,554.26" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="672.00" y="574.48" text-anchor="middle" font-size="12">73</text>
+<clipPath id="hex-0-6"><polygon points="64.00,665.11 32.00,720.53 -32.00,720.53 -64.00,665.11 -32.00,609.68 32.00,609.68"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_47.png" x="-64.00" y="609.68" width="128.00" height="110.85" transform="rotate(0 0.00 665.11)" clip-path="url(#hex-0-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="64.00,665.11 32.00,720.53 -32.00,720.53 -64.00,665.11 -32.00,609.68 32.00,609.68" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="0.00" y="629.91" text-anchor="middle" font-size="12">47</text>
+<clipPath id="hex-1-6"><polygon points="160.00,720.53 128.00,775.96 64.00,775.96 32.00,720.53 64.00,665.11 128.00,665.11"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_61.png" x="32.00" y="665.11" width="128.00" height="110.85" transform="rotate(0 96.00 720.53)" clip-path="url(#hex-1-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,720.53 128.00,775.96 64.00,775.96 32.00,720.53 64.00,665.11 128.00,665.11" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="96.00" y="685.33" text-anchor="middle" font-size="12">61</text>
+<clipPath id="hex-2-6"><polygon points="256.00,665.11 224.00,720.53 160.00,720.53 128.00,665.11 160.00,609.68 224.00,609.68"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_46.png" x="128.00" y="609.68" width="128.00" height="110.85" transform="rotate(0 192.00 665.11)" clip-path="url(#hex-2-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,665.11 224.00,720.53 160.00,720.53 128.00,665.11 160.00,609.68 224.00,609.68" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="629.91" text-anchor="middle" font-size="12">46</text>
+<clipPath id="hex-3-6"><polygon points="352.00,720.53 320.00,775.96 256.00,775.96 224.00,720.53 256.00,665.11 320.00,665.11"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_68.png" x="224.00" y="665.11" width="128.00" height="110.85" transform="rotate(0 288.00 720.53)" clip-path="url(#hex-3-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,720.53 320.00,775.96 256.00,775.96 224.00,720.53 256.00,665.11 320.00,665.11" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="685.33" text-anchor="middle" font-size="12">68</text>
+<clipPath id="hex-4-6"><polygon points="448.00,665.11 416.00,720.53 352.00,720.53 320.00,665.11 352.00,609.68 416.00,609.68"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_65.png" x="320.00" y="609.68" width="128.00" height="110.85" transform="rotate(0 384.00 665.11)" clip-path="url(#hex-4-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,665.11 416.00,720.53 352.00,720.53 320.00,665.11 352.00,609.68 416.00,609.68" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="629.91" text-anchor="middle" font-size="12">65</text>
+<clipPath id="hex-5-6"><polygon points="544.00,720.53 512.00,775.96 448.00,775.96 416.00,720.53 448.00,665.11 512.00,665.11"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_48.png" x="416.00" y="665.11" width="128.00" height="110.85" transform="rotate(0 480.00 720.53)" clip-path="url(#hex-5-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,720.53 512.00,775.96 448.00,775.96 416.00,720.53 448.00,665.11 512.00,665.11" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="685.33" text-anchor="middle" font-size="12">48</text>
+<clipPath id="hex-6-6"><polygon points="640.00,665.11 608.00,720.53 544.00,720.53 512.00,665.11 544.00,609.68 608.00,609.68"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="512.00" y="609.68" width="128.00" height="110.85" transform="rotate(0 576.00 665.11)" clip-path="url(#hex-6-6)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="640.00,665.11 608.00,720.53 544.00,720.53 512.00,665.11 544.00,609.68 608.00,609.68" fill="none" stroke="#e67e22" stroke-width="6"/>
+<text x="576.00" y="711.19" text-anchor="middle" font-size="11">The Floor is Lava</text>
+<text x="576.00" y="629.91" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-0-7"><polygon points="64.00,775.96 32.00,831.38 -32.00,831.38 -64.00,775.96 -32.00,720.53 32.00,720.53"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_0.png" x="-64.00" y="720.53" width="128.00" height="110.85" transform="rotate(0 0.00 775.96)" clip-path="url(#hex-0-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="64.00,775.96 32.00,831.38 -32.00,831.38 -64.00,775.96 -32.00,720.53 32.00,720.53" fill="none" stroke="#85929e" stroke-width="6"/>
+<text x="0.00" y="822.04" text-anchor="middle" font-size="11">Final Frontier</text>
+<text x="0.00" y="740.76" text-anchor="middle" font-size="12">0</text>
+<clipPath id="hex-1-7"><polygon points="160.00,831.38 128.00,886.81 64.00,886.81 32.00,831.38 64.00,775.96 128.00,775.96"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_35.png" x="32.00" y="775.96" width="128.00" height="110.85" transform="rotate(0 96.00 831.38)" clip-path="url(#hex-1-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,831.38 128.00,886.81 64.00,886.81 32.00,831.38 64.00,775.96 128.00,775.96" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="96.00" y="796.18" text-anchor="middle" font-size="12">35</text>
+<clipPath id="hex-2-7"><polygon points="256.00,775.96 224.00,831.38 160.00,831.38 128.00,775.96 160.00,720.53 224.00,720.53"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_78.png" x="128.00" y="720.53" width="128.00" height="110.85" transform="rotate(0 192.00 775.96)" clip-path="url(#hex-2-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,775.96 224.00,831.38 160.00,831.38 128.00,775.96 160.00,720.53 224.00,720.53" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="740.76" text-anchor="middle" font-size="12">78</text>
+<clipPath id="hex-3-7"><polygon points="352.00,831.38 320.00,886.81 256.00,886.81 224.00,831.38 256.00,775.96 320.00,775.96"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_18.png" x="224.00" y="775.96" width="128.00" height="110.85" transform="rotate(0 288.00 831.38)" clip-path="url(#hex-3-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,831.38 320.00,886.81 256.00,886.81 224.00,831.38 256.00,775.96 320.00,775.96" fill="none" stroke="#f4d03f" stroke-width="6"/>
+<text x="288.00" y="877.46" text-anchor="middle" font-size="11">Mecatol Rex</text>
+<text x="288.00" y="796.18" text-anchor="middle" font-size="12">18</text>
+<clipPath id="hex-4-7"><polygon points="448.00,775.96 416.00,831.38 352.00,831.38 320.00,775.96 352.00,720.53 416.00,720.53"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_19.png" x="320.00" y="720.53" width="128.00" height="110.85" transform="rotate(0 384.00 775.96)" clip-path="url(#hex-4-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,775.96 416.00,831.38 352.00,831.38 320.00,775.96 352.00,720.53 416.00,720.53" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="740.76" text-anchor="middle" font-size="12">19</text>
+<clipPath id="hex-5-7"><polygon points="544.00,831.38 512.00,886.81 448.00,886.81 416.00,831.38 448.00,775.96 512.00,775.96"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_38.png" x="416.00" y="775.96" width="128.00" height="110.85" transform="rotate(0 480.00 831.38)" clip-path="url(#hex-5-7)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="544.00,831.38 512.00,886.81 448.00,886.81 416.00,831.38 448.00,775.96 512.00,775.96" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="480.00" y="796.18" text-anchor="middle" font-size="12">38</text>
+<clipPath id="hex-0-8"><polygon points="64.00,886.81 32.00,942.24 -32.00,942.24 -64.00,886.81 -32.00,831.38 32.00,831.38"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_59.png" x="-64.00" y="831.38" width="128.00" height="110.85" transform="rotate(0 0.00 886.81)" clip-path="url(#hex-0-8)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="64.00,886.81 32.00,942.24 -32.00,942.24 -64.00,886.81 -32.00,831.38 32.00,831.38" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="0.00" y="851.61" text-anchor="middle" font-size="12">59</text>
+<clipPath id="hex-1-8"><polygon points="160.00,942.24 128.00,997.66 64.00,997.66 32.00,942.24 64.00,886.81 128.00,886.81"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_41.png" x="32.00" y="886.81" width="128.00" height="110.85" transform="rotate(0 96.00 942.24)" clip-path="url(#hex-1-8)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="160.00,942.24 128.00,997.66 64.00,997.66 32.00,942.24 64.00,886.81 128.00,886.81" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="96.00" y="907.04" text-anchor="middle" font-size="12">41</text>
+<clipPath id="hex-2-8"><polygon points="256.00,886.81 224.00,942.24 160.00,942.24 128.00,886.81 160.00,831.38 224.00,831.38"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_40.png" x="128.00" y="831.38" width="128.00" height="110.85" transform="rotate(0 192.00 886.81)" clip-path="url(#hex-2-8)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="256.00,886.81 224.00,942.24 160.00,942.24 128.00,886.81 160.00,831.38 224.00,831.38" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="192.00" y="851.61" text-anchor="middle" font-size="12">40</text>
+<clipPath id="hex-3-8"><polygon points="352.00,942.24 320.00,997.66 256.00,997.66 224.00,942.24 256.00,886.81 320.00,886.81"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_39.png" x="224.00" y="886.81" width="128.00" height="110.85" transform="rotate(0 288.00 942.24)" clip-path="url(#hex-3-8)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="352.00,942.24 320.00,997.66 256.00,997.66 224.00,942.24 256.00,886.81 320.00,886.81" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="288.00" y="907.04" text-anchor="middle" font-size="12">39</text>
+<clipPath id="hex-4-8"><polygon points="448.00,886.81 416.00,942.24 352.00,942.24 320.00,886.81 352.00,831.38 416.00,831.38"/></clipPath>
+<image href="https://milty.shenanigans.be/img/tiles/ST_77.png" x="320.00" y="831.38" width="128.00" height="110.85" transform="rotate(0 384.00 886.81)" clip-path="url(#hex-4-8)" preserveAspectRatio="xMidYMid slice"/>
+<polygon points="448.00,886.81 416.00,942.24 352.00,942.24 320.00,886.81 352.00,831.38 416.00,831.38" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
+<text x="384.00" y="851.61" text-anchor="middle" font-size="12">77</text>
 </svg>
