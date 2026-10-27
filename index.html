@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Operation Clever Knowledge — TI4 Map</title>
+    <title>Operation Puzzled Energy — TI4 Map</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -42,7 +42,9 @@
       font: inherit;
       text-decoration: none;
     }
-    button.active, button:hover, .btn:hover { border-color: var(--gold); color: var(--gold); }
+    button.skip { border-color: var(--skip, var(--line)); }
+    button.skip.active { background: color-mix(in srgb, var(--skip) 28%, transparent); color: var(--ink); border-color: var(--skip); }
+    .skip-label { font-size: 11px; font-weight: 700; fill: #f6f1e3; paint-order: stroke; stroke: #140c08; stroke-width: 3px; }
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr);
@@ -103,6 +105,11 @@
     <div class="toolbar">
       <button id="view-art" class="active" type="button">Tile art</button>
       <button id="view-schema" type="button">Schematic</button>
+      <button class="skip" id="skip-propulsion" type="button" style="--skip:#5dade2">Blue</button>
+      <button class="skip" id="skip-biotic" type="button" style="--skip:#2ecc71">Green</button>
+      <button class="skip" id="skip-cybernetic" type="button" style="--skip:#f1c40f">Yellow</button>
+      <button class="skip" id="skip-warfare" type="button" style="--skip:#e74c3c">Red</button>
+      <button class="skip" id="skip-all" type="button" style="--skip:#e4c37a">All</button>
       <a class="btn" href="data/map.csv" download>Download CSV</a>
       <a class="btn" href="https://milty.shenanigans.be/d/20261027_84b2c85b5936a1ae?fresh=1#draft" target="_blank" rel="noreferrer">Milty draft</a>
     </div>
@@ -136,6 +143,14 @@
     let showArt = true;
     let focus = null;
     let selected = null;
+    const SKIP = {
+      propulsion: { name: "blue", color: "#5dade2" },
+      biotic: { name: "green", color: "#2ecc71" },
+      cybernetic: { name: "yellow", color: "#f1c40f" },
+      warfare: { name: "red", color: "#e74c3c" },
+    };
+    const SKIP_ORDER = ["propulsion", "biotic", "cybernetic", "warfare"];
+    let skipFilter = new Set();
 
     function pixel(q, r) {
       return [SIZE * 1.5 * q, SIZE * (Math.sqrt(3) / 2 * q + Math.sqrt(3) * r)];
@@ -148,6 +163,19 @@
     }
     function playerColor(name) {
       return (data.players.find(p => p.name === name) || {}).color || "#e4c37a";
+    }
+    function hexSkips(hex) {
+      const found = new Set(hex.specialties || []);
+      return SKIP_ORDER.filter(key => found.has(key));
+    }
+    function neighborSkips(home) {
+      const found = new Set();
+      data.hexes.filter(h => neighborOf(home, h)).forEach(h => hexSkips(h).forEach(s => found.add(s)));
+      return SKIP_ORDER.filter(key => found.has(key));
+    }
+    function matchesSkip(hex) {
+      if (!skipFilter.size) return true;
+      return hexSkips(hex).some(key => skipFilter.has(key));
     }
     function shortLabel(hex) {
       if (hex.is_mecatol) return "Mecatol Rex";
@@ -181,7 +209,7 @@
 
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.classList.add("hex");
-        if (focus && !isLit(hex)) g.classList.add("dim");
+        if ((focus && !isLit(hex)) || (skipFilter.size && !matchesSkip(hex))) g.classList.add("dim");
         g.addEventListener("click", () => {
           const next = focusFor(hex);
           focus = sameFocus(focus, next) ? null : next;
@@ -242,6 +270,22 @@
         id.setAttribute("class", "overlay-label tile-id");
         id.textContent = hex.is_home ? "" : hex.tile_id;
         g.appendChild(id);
+
+        const shownSkips = hexSkips(hex).filter(key => !skipFilter.size || skipFilter.has(key));
+        if (skipFilter.size && shownSkips.length) {
+          shownSkips.forEach((key, index) => {
+            const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const span = (shownSkips.length - 1) * 14;
+            dot.setAttribute("cx", cx - span / 2 + index * 14);
+            dot.setAttribute("cy", cy + SIZE * 0.42);
+            dot.setAttribute("r", "5.5");
+            dot.setAttribute("fill", SKIP[key].color);
+            dot.setAttribute("stroke", "#140c08");
+            dot.setAttribute("stroke-width", "1.5");
+            dot.setAttribute("pointer-events", "none");
+            g.appendChild(dot);
+          });
+        }
 
         if (hex.is_home || hex.is_mecatol) {
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -340,9 +384,11 @@
         const el = document.createElement("article");
         el.className = "position" + (focus && focus.kind === "position" && focus.key === p.name ? " selected" : "");
         el.style.borderLeftColor = p.color;
+        const skips = neighborSkips(home);
+        const skipText = skips.length ? `${skips.map(key => SKIP[key].name).join(", ")} tech skip` : "no tech skip";
         el.innerHTML = `
           <h3>${p.name}</h3>
-          <div class="where">${p.q},${p.r} · ${p.resources} resources / ${p.influence} influence next door</div>
+          <div class="where">${p.resources} resources / ${p.influence} influence next door / ${skipText}</div>
           <p class="adj">${adjacent.join(" · ")}</p>`;
         el.addEventListener("click", () => {
           const next = { kind: "position", key: p.name };
@@ -368,6 +414,7 @@
           ${hex.position ? `<dt>Position</dt><dd>${hex.position}</dd>` : ""}
           <dt>Coordinate</dt><dd>${hex.q},${hex.r}</dd>
           <dt>Value</dt><dd>${hex.resources}/${hex.influence} (optimal ${hex.optimal_resources}/${hex.optimal_influence})</dd>
+          ${hexSkips(hex).length ? `<dt>Tech skip</dt><dd>${hexSkips(hex).map(key => SKIP[key].name).join(", ")}</dd>` : ""}
           ${hex.wormhole ? `<dt>Wormhole</dt><dd>${hex.wormhole}</dd>` : ""}
           ${hex.is_hyperlane ? `<dt>Connects</dt><dd>${(() => { const net = laneNetwork(hex); return [...net.lanes.map(h => `${h.tile_id} hyperlane`), ...net.systems.map(h => `${h.tile_id} ${h.system_label}`)].join("<br>"); })()}</dd>` : ""}
           ${hex.wormhole ? `<dt>Linked by ${hex.wormhole}</dt><dd>${data.hexes.filter(h => h !== hex && h.wormhole === hex.wormhole).map(h => `${h.tile_id} ${h.system_label}`).join("<br>") || "none"}</dd>` : ""}
@@ -415,6 +462,27 @@
       await navigator.clipboard.writeText(data.tts_map_string);
       document.getElementById("copy-tts").textContent = "Copied";
       setTimeout(() => document.getElementById("copy-tts").textContent = "Copy", 1200);
+    });
+
+    function syncSkipButtons() {
+      SKIP_ORDER.forEach(key => {
+        document.getElementById(`skip-${key}`).classList.toggle("active", skipFilter.has(key));
+      });
+      document.getElementById("skip-all").classList.toggle("active", skipFilter.size === SKIP_ORDER.length);
+    }
+    SKIP_ORDER.forEach(key => {
+      document.getElementById(`skip-${key}`).addEventListener("click", () => {
+        if (skipFilter.has(key)) skipFilter.delete(key);
+        else skipFilter.add(key);
+        syncSkipButtons();
+        renderMap();
+      });
+    });
+    document.getElementById("skip-all").addEventListener("click", () => {
+      if (skipFilter.size === SKIP_ORDER.length) skipFilter.clear();
+      else SKIP_ORDER.forEach(key => skipFilter.add(key));
+      syncSkipButtons();
+      renderMap();
     });
 
     renderAll();
