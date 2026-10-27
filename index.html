@@ -166,8 +166,29 @@
 
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.classList.add("hex");
+<<<<<<< Updated upstream
         if (focusPlayer && hex.player && hex.player !== focusPlayer) g.classList.add("dim");
         g.addEventListener("click", () => {
+=======
+        const sliceBound = focus && focus.kind === "position";
+        if (sliceBound) {
+          if (!isLit(hex)) g.classList.add("dim");
+        } else if ((focus && !isLit(hex)) || (skipFilter.size && !matchesSkip(hex))) {
+          g.classList.add("dim");
+        }
+        g.addEventListener("click", (event) => {
+          event.stopPropagation();
+          if (skipFilter.size) {
+            skipFilter.clear();
+            syncSkipButtons();
+            focus = null;
+            selected = null;
+            renderAll();
+            return;
+          }
+          const next = focusFor(hex);
+          focus = sameFocus(focus, next) ? null : next;
+>>>>>>> Stashed changes
           selected = hex;
           focusPlayer = hex.player;
           renderAll();
@@ -222,8 +243,29 @@
         id.textContent = hex.tile_id;
         g.appendChild(id);
 
+<<<<<<< Updated upstream
         if (hex.is_home) {
           const len = Math.hypot(cx, cy) || 1;
+=======
+        const shownSkips = hexSkips(hex).filter(key => !skipFilter.size || skipFilter.has(key));
+        const showSkips = skipFilter.size && shownSkips.length && (!sliceBound || isLit(hex));
+        if (showSkips) {
+          shownSkips.forEach((key, index) => {
+            const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const span = (shownSkips.length - 1) * 14;
+            dot.setAttribute("cx", cx - span / 2 + index * 14);
+            dot.setAttribute("cy", cy + SIZE * 0.42);
+            dot.setAttribute("r", "5.5");
+            dot.setAttribute("fill", SKIP[key].color);
+            dot.setAttribute("stroke", "#140c08");
+            dot.setAttribute("stroke-width", "1.5");
+            dot.setAttribute("pointer-events", "none");
+            g.appendChild(dot);
+          });
+        }
+
+        if (hex.is_home || hex.is_mecatol) {
+>>>>>>> Stashed changes
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
           extra.setAttribute("x", cx + (cx / len) * SIZE * 0.95);
           extra.setAttribute("y", cy + (cy / len) * SIZE * 0.95);
@@ -329,6 +371,38 @@
       setTimeout(() => document.getElementById("copy-tts").textContent = "Copy", 1200);
     });
 
+<<<<<<< Updated upstream
+=======
+    function syncSkipButtons() {
+      SKIP_ORDER.forEach(key => {
+        document.getElementById(`skip-${key}`).classList.toggle("active", skipFilter.has(key));
+      });
+      document.getElementById("skip-all").classList.toggle("active", skipFilter.size === SKIP_ORDER.length);
+    }
+    SKIP_ORDER.forEach(key => {
+      document.getElementById(`skip-${key}`).addEventListener("click", () => {
+        if (skipFilter.has(key)) skipFilter.delete(key);
+        else skipFilter.add(key);
+        syncSkipButtons();
+        renderMap();
+      });
+    });
+    document.getElementById("skip-all").addEventListener("click", () => {
+      if (skipFilter.size === SKIP_ORDER.length) skipFilter.clear();
+      else SKIP_ORDER.forEach(key => skipFilter.add(key));
+      syncSkipButtons();
+      renderMap();
+    });
+    document.getElementById("galaxy").addEventListener("click", () => {
+      if (!skipFilter.size && !focus) return;
+      skipFilter.clear();
+      syncSkipButtons();
+      focus = null;
+      selected = null;
+      renderAll();
+    });
+
+>>>>>>> Stashed changes
     renderAll();
   </script>
 </body>
