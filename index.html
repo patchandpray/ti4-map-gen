@@ -209,16 +209,6 @@
 
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.classList.add("hex");
-<<<<<<< Updated upstream
-        if ((focus && !isLit(hex)) || (skipFilter.size && !matchesSkip(hex))) g.classList.add("dim");
-        g.addEventListener("click", () => {
-          const next = focusFor(hex);
-          focus = sameFocus(focus, next) ? null : next;
-=======
-<<<<<<< Updated upstream
-        if (focusPlayer && hex.player && hex.player !== focusPlayer) g.classList.add("dim");
-        g.addEventListener("click", () => {
-=======
         const sliceBound = focus && focus.kind === "position";
         if (sliceBound) {
           if (!isLit(hex)) g.classList.add("dim");
@@ -227,7 +217,7 @@
         }
         g.addEventListener("click", (event) => {
           event.stopPropagation();
-          if (skipFilter.size) {
+          if (skipFilter.size && !(focus && focus.kind === "position")) {
             skipFilter.clear();
             syncSkipButtons();
             focus = null;
@@ -237,8 +227,6 @@
           }
           const next = focusFor(hex);
           focus = sameFocus(focus, next) ? null : next;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
           selected = hex;
           renderAll();
         });
@@ -297,18 +285,9 @@
         id.textContent = hex.is_home ? "" : hex.tile_id;
         g.appendChild(id);
 
-<<<<<<< Updated upstream
-        const shownSkips = hexSkips(hex).filter(key => !skipFilter.size || skipFilter.has(key));
-        if (skipFilter.size && shownSkips.length) {
-=======
-<<<<<<< Updated upstream
-        if (hex.is_home) {
-          const len = Math.hypot(cx, cy) || 1;
-=======
         const shownSkips = hexSkips(hex).filter(key => !skipFilter.size || skipFilter.has(key));
         const showSkips = skipFilter.size && shownSkips.length && (!sliceBound || isLit(hex));
         if (showSkips) {
->>>>>>> Stashed changes
           shownSkips.forEach((key, index) => {
             const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             const span = (shownSkips.length - 1) * 14;
@@ -324,10 +303,6 @@
         }
 
         if (hex.is_home || hex.is_mecatol) {
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
           extra.setAttribute("x", cx);
           extra.setAttribute("y", cy + SIZE * 0.55);
@@ -504,11 +479,6 @@
       setTimeout(() => document.getElementById("copy-tts").textContent = "Copy", 1200);
     });
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
     function syncSkipButtons() {
       SKIP_ORDER.forEach(key => {
         document.getElementById(`skip-${key}`).classList.toggle("active", skipFilter.has(key));
@@ -529,10 +499,8 @@
       syncSkipButtons();
       renderMap();
     });
-<<<<<<< Updated upstream
-
-=======
     document.getElementById("galaxy").addEventListener("click", () => {
+      if (focus && focus.kind === "position") return;
       if (!skipFilter.size && !focus) return;
       skipFilter.clear();
       syncSkipButtons();
@@ -541,8 +509,6 @@
       renderAll();
     });
 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     renderAll();
   </script>
 </body>
