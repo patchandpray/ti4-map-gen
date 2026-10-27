@@ -134,7 +134,7 @@
     const data = window.MAP_DATA;
     const svg = document.getElementById("galaxy");
     let showArt = true;
-    let focusPlayer = null;
+    let focus = null;
     let selected = null;
 
     function pixel(q, r) {
@@ -181,14 +181,11 @@
 
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.classList.add("hex");
-        if (focusPlayer) {
-          const home = data.hexes.find(h => h.position === focusPlayer);
-          const related = home && (hex === home || neighborOf(home, hex));
-          if (!related) g.classList.add("dim");
-        }
+        if (focus && !isLit(hex)) g.classList.add("dim");
         g.addEventListener("click", () => {
+          const next = focusFor(hex);
+          focus = sameFocus(focus, next) ? null : next;
           selected = hex;
-          focusPlayer = hex.player;
           renderAll();
         });
 
@@ -271,6 +268,65 @@
       return [[1, 0], [0, 1], [-1, 1], [-1, 0], [0, -1], [1, -1]]
         .some(([dq, dr]) => a.q + dq === b.q && a.r + dr === b.r);
     }
+    function hexAt(q, r) {
+      return data.hexes.find(h => h.q === q && h.r === r);
+    }
+    // Milty edge 0 is the top flat edge; indexes increase clockwise.
+    const LANE_EDGE = [[0, -1], [1, -1], [1, 0], [0, 1], [-1, 1], [-1, 0]];
+    function laneTargets(hex) {
+      const turn = Math.round((hex.image_rotation || 0) / 60);
+      const seen = [];
+      for (const link of hex.hyperlanes || []) {
+        for (const edge of link) {
+          const [dq, dr] = LANE_EDGE[(edge + turn) % 6];
+          const next = hexAt(hex.q + dq, hex.r + dr);
+          if (next && !seen.includes(next)) seen.push(next);
+        }
+      }
+      return seen;
+    }
+    function laneNetwork(start) {
+      const lanes = [];
+      const systems = [];
+      const queue = [start];
+      const seen = new Set([`${start.q},${start.r}`]);
+      while (queue.length) {
+        const lane = queue.shift();
+        lanes.push(lane);
+        for (const next of laneTargets(lane)) {
+          const id = `${next.q},${next.r}`;
+          if (seen.has(id)) continue;
+          seen.add(id);
+          if (next.is_hyperlane) queue.push(next);
+          else systems.push(next);
+        }
+      }
+      return { lanes, systems };
+    }
+    function sameFocus(a, b) {
+      return a && b && a.kind === b.kind && a.key === b.key;
+    }
+    function focusFor(hex) {
+      if (hex.position) return { kind: "position", key: hex.position };
+      if (hex.is_hyperlane) return { kind: "hyperlane", key: `${hex.q},${hex.r}` };
+      if (hex.wormhole) return { kind: "wormhole", key: hex.wormhole };
+      return null;
+    }
+    function isLit(hex) {
+      if (!focus) return true;
+      if (focus.kind === "position") {
+        const home = data.hexes.find(h => h.position === focus.key);
+        return !!(home && (hex === home || neighborOf(home, hex)));
+      }
+      if (focus.kind === "wormhole") return hex.wormhole === focus.key;
+      if (focus.kind === "hyperlane") {
+        const lane = data.hexes.find(h => `${h.q},${h.r}` === focus.key);
+        if (!lane) return false;
+        const net = laneNetwork(lane);
+        return net.lanes.includes(hex) || net.systems.includes(hex);
+      }
+      return true;
+    }
 
     function renderPicks() {
       const root = document.getElementById("picks");
@@ -282,14 +338,15 @@
           .filter(h => neighborOf(home, h))
           .map(h => `${h.is_hyperlane ? "lane" : h.tile_id} ${h.system_label}`);
         const el = document.createElement("article");
-        el.className = "position" + (focusPlayer === p.name ? " selected" : "");
+        el.className = "position" + (focus && focus.kind === "position" && focus.key === p.name ? " selected" : "");
         el.style.borderLeftColor = p.color;
         el.innerHTML = `
           <h3>${p.name}</h3>
           <div class="where">${p.q},${p.r} · ${p.resources} resources / ${p.influence} influence next door</div>
           <p class="adj">${adjacent.join(" · ")}</p>`;
         el.addEventListener("click", () => {
-          focusPlayer = focusPlayer === p.name ? null : p.name;
+          const next = { kind: "position", key: p.name };
+          focus = sameFocus(focus, next) ? null : next;
           selected = home;
           renderAll();
         });
@@ -312,6 +369,8 @@
           <dt>Coordinate</dt><dd>${hex.q},${hex.r}</dd>
           <dt>Value</dt><dd>${hex.resources}/${hex.influence} (optimal ${hex.optimal_resources}/${hex.optimal_influence})</dd>
           ${hex.wormhole ? `<dt>Wormhole</dt><dd>${hex.wormhole}</dd>` : ""}
+          ${hex.is_hyperlane ? `<dt>Connects</dt><dd>${(() => { const net = laneNetwork(hex); return [...net.lanes.map(h => `${h.tile_id} hyperlane`), ...net.systems.map(h => `${h.tile_id} ${h.system_label}`)].join("<br>"); })()}</dd>` : ""}
+          ${hex.wormhole ? `<dt>Linked by ${hex.wormhole}</dt><dd>${data.hexes.filter(h => h !== hex && h.wormhole === hex.wormhole).map(h => `${h.tile_id} ${h.system_label}`).join("<br>") || "none"}</dd>` : ""}
           ${hex.anomaly ? `<dt>Anomaly</dt><dd>${hex.anomaly}</dd>` : ""}
           ${planets ? `<dt>Planets</dt><dd>${planets}</dd>` : ""}
           ${stations ? `<dt>Stations</dt><dd>${stations}</dd>` : ""}
