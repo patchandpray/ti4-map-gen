@@ -11,7 +11,7 @@ tts_index,q,r,s,ring,tile_id,system_label,position,planets,stations,resources,in
 75,1,4,-5,5,49,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_49.png
 76,0,5,-5,5,72,Lisis / Velnor,,Lisis 2/2 industrial; Velnor 2/1 industrial tech:warfare,,4,3,3.0,1.0,,,warfare,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_72.png
 103,6,0,-6,6,50,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_50.png
-104,5,1,-6,6,88B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,0,https://milty.shenanigans.be/img/tiles/ST_88B.png
+104,5,1,-6,6,88B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,1,https://milty.shenanigans.be/img/tiles/ST_88B.png
 105,4,2,-6,6,62,Sem-Lore,,Sem-Lore 3/2 cultural tech:cybernetic,,3,2,3.0,0.0,,,cybernetic,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_62.png
 106,3,3,-6,6,75,Loki / Abaddon / Ashtroth,,Loki 1/2 cultural; Abaddon 1/0 cultural; Ashtroth 2/0 hazardous,,4,2,3.0,2.0,,,,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_75.png
 107,2,4,-6,6,74,Vega Major / Vega Minor,,Vega Major 2/1 cultural; Vega Minor 1/2 cultural tech:propulsion,,3,3,2.0,2.0,,,propulsion,,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_74.png
