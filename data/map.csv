@@ -49,7 +49,7 @@ tts_index,q,r,s,ring,tile_id,system_label,position,planets,stations,resources,in
 297,4,6,-10,10,65,Primor,,Primor 2/1 cultural legendary,,2,1,2.0,0.0,,,,Primor,blue,PoK,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_65.png
 298,3,7,-10,10,18,Mecatol Rex,,Mecatol Rex 1/6,,1,6,0.0,6.0,,,,,blue,BaseGame,false,true,false,0,https://milty.shenanigans.be/img/tiles/ST_18.png
 299,2,8,-10,10,40,beta wormhole,,,,0,0,0.0,0.0,beta,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_40.png
-356,8,3,-11,11,87B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,4,https://milty.shenanigans.be/img/tiles/ST_87B.png
+356,8,3,-11,11,87B,Hyperlane,,,,0,0,0.0,0.0,,,,,hyperlane,PoK,false,false,true,3,https://milty.shenanigans.be/img/tiles/ST_87B.png
 357,7,4,-11,11,25,Quann,,Quann 2/1 cultural,,2,1,2.0,0.0,beta,,,,blue,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_25.png
 358,6,5,-11,11,43,supernova,,,,0,0,0.0,0.0,,supernova,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_43.png
 359,5,6,-11,11,48,Empty space,,,,0,0,0.0,0.0,,,,,red,BaseGame,false,false,false,0,https://milty.shenanigans.be/img/tiles/ST_48.png

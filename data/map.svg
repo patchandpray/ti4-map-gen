@@ -105,7 +105,7 @@
 <polygon points="736.00,387.98 704.00,443.41 640.00,443.41 608.00,387.98 640.00,332.55 704.00,332.55" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
 <text x="672.00" y="352.78" text-anchor="middle" font-size="12">66</text>
 <clipPath id="hex-8-3"><polygon points="832.00,332.55 800.00,387.98 736.00,387.98 704.00,332.55 736.00,277.13 800.00,277.13"/></clipPath>
-<image href="https://milty.shenanigans.be/img/tiles/ST_87B.png" x="704.00" y="277.13" width="128.00" height="110.85" transform="rotate(240 768.00 332.55)" clip-path="url(#hex-8-3)" preserveAspectRatio="xMidYMid slice"/>
+<image href="https://milty.shenanigans.be/img/tiles/ST_87B.png" x="704.00" y="277.13" width="128.00" height="110.85" transform="rotate(180 768.00 332.55)" clip-path="url(#hex-8-3)" preserveAspectRatio="xMidYMid slice"/>
 <polygon points="832.00,332.55 800.00,387.98 736.00,387.98 704.00,332.55 736.00,277.13 800.00,277.13" fill="none" stroke="#8aa0c8" stroke-width="2.5"/>
 <text x="768.00" y="297.35" text-anchor="middle" font-size="12">87B</text>
 <clipPath id="hex-0-4"><polygon points="64.00,443.41 32.00,498.83 -32.00,498.83 -64.00,443.41 -32.00,387.98 32.00,387.98"/></clipPath>
