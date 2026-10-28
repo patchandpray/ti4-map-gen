@@ -67,9 +67,9 @@ PLAYERS = [
     {"order": 1, "name": "Paul", "faction": "The Federation of Sol", "slice": None, "speaker": None, "claimed": True, "color": "#9b59b6"},
     {"order": 2, "name": "Sander", "faction": "The Ghosts of Creuss", "slice": None, "speaker": None, "claimed": True, "color": "#e84393"},
     {"order": 3, "name": "Rens", "faction": None, "slice": 4, "speaker": None, "claimed": False, "color": "#e67e22"},
-    {"order": 4, "name": "Lars", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#ecf0f1", "turn": True},
-    {"order": 5, "name": "Tim", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#2ecc71"},
-    {"order": 6, "name": "Arie", "faction": None, "slice": None, "speaker": None, "claimed": False, "color": "#5dade2"},
+    {"order": 4, "name": "Lars", "faction": "The L1z1x Mindnet", "slice": None, "speaker": None, "claimed": True, "color": "#ecf0f1"},
+    {"order": 5, "name": "Tim", "faction": "The Winnu", "slice": None, "speaker": None, "claimed": True, "color": "#2ecc71"},
+    {"order": 6, "name": "Arie", "faction": None, "slice": None, "speaker": None, "claimed": False, "color": "#5dade2", "turn": True},
     {"order": 7, "name": "Ruben", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#f1c40f"},
 ]
 
