@@ -57,32 +57,31 @@
     {
       "order": 4,
       "name": "Lars",
-      "faction": null,
+      "faction": "The L1z1x Mindnet",
       "slice": null,
       "speaker": null,
       "claimed": true,
       "color": "#ecf0f1",
-      "turn": true,
-      "faction_id": null,
-      "homesystem": null,
-      "wiki": null,
-      "reference_url": null,
-      "icon_url": null,
+      "faction_id": "l1z1x",
+      "homesystem": "6",
+      "wiki": "https://twilight-imperium.fandom.com/wiki/The_L1Z1X_Mindnet",
+      "reference_url": "https://milty.shenanigans.be/img/reference/r_l1z1x.jpg",
+      "icon_url": "https://milty.shenanigans.be/img/factions/ti_l1z1x.png",
       "position": null
     },
     {
       "order": 5,
       "name": "Tim",
-      "faction": null,
+      "faction": "The Winnu",
       "slice": null,
       "speaker": null,
       "claimed": true,
       "color": "#2ecc71",
-      "faction_id": null,
-      "homesystem": null,
-      "wiki": null,
-      "reference_url": null,
-      "icon_url": null,
+      "faction_id": "winnu",
+      "homesystem": "7",
+      "wiki": "https://twilight-imperium.fandom.com/wiki/The_Winnu",
+      "reference_url": "https://milty.shenanigans.be/img/reference/r_winnu.jpg",
+      "icon_url": "https://milty.shenanigans.be/img/factions/ti_winnu.png",
       "position": null
     },
     {
@@ -93,6 +92,7 @@
       "speaker": null,
       "claimed": false,
       "color": "#5dade2",
+      "turn": true,
       "faction_id": null,
       "homesystem": null,
       "wiki": null,
@@ -3364,8 +3364,8 @@
       "homesystem": "7",
       "icon_url": "https://milty.shenanigans.be/img/factions/ti_winnu.png",
       "reference_url": "https://milty.shenanigans.be/img/reference/r_winnu.jpg",
-      "picked": false,
-      "picked_by": null
+      "picked": true,
+      "picked_by": "Tim"
     },
     {
       "name": "Sardakk N'orr",
@@ -3384,8 +3384,8 @@
       "homesystem": "6",
       "icon_url": "https://milty.shenanigans.be/img/factions/ti_l1z1x.png",
       "reference_url": "https://milty.shenanigans.be/img/reference/r_l1z1x.jpg",
-      "picked": false,
-      "picked_by": null
+      "picked": true,
+      "picked_by": "Lars"
     },
     {
       "name": "The Yssaril Tribes",
