@@ -13,6 +13,8 @@
       "order": 1,
       "name": "Paul",
       "faction": "The Federation of Sol",
+      "slice": null,
+      "speaker": null,
       "claimed": true,
       "color": "#9b59b6",
       "faction_id": "sol",
@@ -25,21 +27,24 @@
     {
       "order": 2,
       "name": "Sander",
-      "faction": null,
-      "claimed": false,
+      "faction": "The Ghosts of Creuss",
+      "slice": null,
+      "speaker": null,
+      "claimed": true,
       "color": "#e84393",
-      "turn": true,
-      "faction_id": null,
-      "homesystem": null,
-      "wiki": null,
-      "reference_url": null,
-      "icon_url": null,
+      "faction_id": "creuss",
+      "homesystem": "17",
+      "wiki": "https://twilight-imperium.fandom.com/wiki/The_Ghosts_of_Creuss",
+      "reference_url": "https://milty.shenanigans.be/img/reference/r_creuss.jpg",
+      "icon_url": "https://milty.shenanigans.be/img/factions/ti_creuss.png",
       "position": null
     },
     {
       "order": 3,
       "name": "Rens",
       "faction": null,
+      "slice": 4,
+      "speaker": null,
       "claimed": false,
       "color": "#e67e22",
       "faction_id": null,
@@ -53,8 +58,11 @@
       "order": 4,
       "name": "Lars",
       "faction": null,
+      "slice": null,
+      "speaker": null,
       "claimed": true,
       "color": "#ecf0f1",
+      "turn": true,
       "faction_id": null,
       "homesystem": null,
       "wiki": null,
@@ -66,6 +74,8 @@
       "order": 5,
       "name": "Tim",
       "faction": null,
+      "slice": null,
+      "speaker": null,
       "claimed": true,
       "color": "#2ecc71",
       "faction_id": null,
@@ -79,6 +89,8 @@
       "order": 6,
       "name": "Arie",
       "faction": null,
+      "slice": null,
+      "speaker": null,
       "claimed": false,
       "color": "#5dade2",
       "faction_id": null,
@@ -92,7 +104,9 @@
       "order": 7,
       "name": "Ruben",
       "faction": null,
-      "claimed": false,
+      "slice": null,
+      "speaker": null,
+      "claimed": true,
       "color": "#f1c40f",
       "faction_id": null,
       "homesystem": null,
@@ -118,7 +132,11 @@
         "supernova"
       ],
       "resources": 4,
-      "influence": 7
+      "influence": 7,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     },
     {
       "key": "pain",
@@ -133,7 +151,11 @@
         "Corneeq / Resulon"
       ],
       "resources": 5,
-      "influence": 9
+      "influence": 9,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     },
     {
       "key": "ambassador",
@@ -148,12 +170,16 @@
         "Tequ'ran / Torkan"
       ],
       "resources": 6,
-      "influence": 7
+      "influence": 7,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     },
     {
       "key": "hold",
       "name": "Why Can't I Hold All",
-      "color": "#f39c12",
+      "color": "#e67e22",
       "q": 3,
       "r": 4,
       "adjacent": [
@@ -165,7 +191,11 @@
         "Kraag / Siig"
       ],
       "resources": 15,
-      "influence": 18
+      "influence": 18,
+      "player": "Rens",
+      "faction": null,
+      "speaker": null,
+      "slice": 4
     },
     {
       "key": "mountain",
@@ -182,7 +212,11 @@
         "Arnor / Lor"
       ],
       "resources": 9,
-      "influence": 9
+      "influence": 9,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     },
     {
       "key": "lava",
@@ -197,7 +231,11 @@
         "Cealdri / Xanhact"
       ],
       "resources": 5,
-      "influence": 3
+      "influence": 3,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     },
     {
       "key": "frontier",
@@ -212,7 +250,11 @@
         "Ang"
       ],
       "resources": 8,
-      "influence": 7
+      "influence": 7,
+      "player": null,
+      "faction": null,
+      "speaker": null,
+      "slice": null
     }
   ],
   "hexes": [
@@ -1733,8 +1775,8 @@
       "is_hyperlane": false,
       "position": "Why Can't I Hold All",
       "position_key": "hold",
-      "color": "#f39c12",
-      "player": null,
+      "color": "#e67e22",
+      "player": "Rens",
       "seat": null,
       "faction": null,
       "neighbor_labels": [
@@ -3312,8 +3354,8 @@
       "homesystem": "17",
       "icon_url": "https://milty.shenanigans.be/img/factions/ti_creuss.png",
       "reference_url": "https://milty.shenanigans.be/img/reference/r_creuss.jpg",
-      "picked": false,
-      "picked_by": null
+      "picked": true,
+      "picked_by": "Sander"
     },
     {
       "name": "The Winnu",

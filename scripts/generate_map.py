@@ -52,15 +52,25 @@ HOMES = {
     "lava": {"name": "The Floor is Lava", "color": "#e67e22"},
 }
 
-# Draft order on the milty page. Only Paul has picked so far.
+SLICE_TO_HOME = {
+    1: "ambassador",
+    2: "non",
+    3: "pain",
+    4: "hold",
+    5: "mountain",
+    6: "frontier",
+    7: "lava",
+}
+
+# slice is the number shown on the milty draft (stored value + 1).
 PLAYERS = [
-    {"order": 1, "name": "Paul", "faction": "The Federation of Sol", "claimed": True, "color": "#9b59b6"},
-    {"order": 2, "name": "Sander", "faction": None, "claimed": False, "color": "#e84393", "turn": True},
-    {"order": 3, "name": "Rens", "faction": None, "claimed": False, "color": "#e67e22"},
-    {"order": 4, "name": "Lars", "faction": None, "claimed": True, "color": "#ecf0f1"},
-    {"order": 5, "name": "Tim", "faction": None, "claimed": True, "color": "#2ecc71"},
-    {"order": 6, "name": "Arie", "faction": None, "claimed": False, "color": "#5dade2"},
-    {"order": 7, "name": "Ruben", "faction": None, "claimed": False, "color": "#f1c40f"},
+    {"order": 1, "name": "Paul", "faction": "The Federation of Sol", "slice": None, "speaker": None, "claimed": True, "color": "#9b59b6"},
+    {"order": 2, "name": "Sander", "faction": "The Ghosts of Creuss", "slice": None, "speaker": None, "claimed": True, "color": "#e84393"},
+    {"order": 3, "name": "Rens", "faction": None, "slice": 4, "speaker": None, "claimed": False, "color": "#e67e22"},
+    {"order": 4, "name": "Lars", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#ecf0f1", "turn": True},
+    {"order": 5, "name": "Tim", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#2ecc71"},
+    {"order": 6, "name": "Arie", "faction": None, "slice": None, "speaker": None, "claimed": False, "color": "#5dade2"},
+    {"order": 7, "name": "Ruben", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#f1c40f"},
 ]
 
 FACTION_POOL = [
@@ -290,8 +300,34 @@ def build(catalog: dict, factions: dict) -> dict:
                 "reference_url": REFERENCE_IMG.format(id=faction["id"]) if faction else None,
                 "icon_url": FACTION_IMG.format(id=faction["id"]) if faction else None,
                 "position": None,
+                "slice": player.get("slice"),
+                "speaker": player.get("speaker"),
             }
         )
+
+    seated = {}
+    for player in players_out:
+        key = SLICE_TO_HOME.get(player.get("slice"))
+        if key:
+            seated[key] = player
+    for h in hexes:
+        occupant = seated.get(h.get("position_key"))
+        if not occupant:
+            continue
+        h["player"] = occupant["name"]
+        h["faction"] = occupant["faction"]
+        h["color"] = occupant["color"]
+        speaker = occupant.get("speaker")
+        h["seat"] = "Speaker" if speaker == 0 else (None if speaker is None else str(speaker + 1))
+        if occupant.get("homesystem"):
+            home_tile = summarize_tile(occupant["homesystem"], catalog)
+            h["tile_id"] = home_tile["tile_id"]
+            h["image_url"] = home_tile["image_url"]
+            h["planets"] = home_tile["planets"]
+            h["resources"] = home_tile["resources"]
+            h["influence"] = home_tile["influence"]
+            h["optimal_resources"] = home_tile["optimal_resources"]
+            h["optimal_influence"] = home_tile["optimal_influence"]
 
     pool = []
     picked = {p["faction"] for p in PLAYERS if p["faction"]}
@@ -323,6 +359,7 @@ def build(catalog: dict, factions: dict) -> dict:
             adj.append(n)
             res += n["resources"]
             inf += n["influence"]
+        occupant = seated.get(h["position_key"])
         positions.append(
             {
                 "key": h["position_key"],
@@ -333,6 +370,10 @@ def build(catalog: dict, factions: dict) -> dict:
                 "adjacent": [a["system_label"] for a in adj],
                 "resources": res,
                 "influence": inf,
+                "player": occupant["name"] if occupant else None,
+                "faction": occupant["faction"] if occupant else None,
+                "speaker": occupant.get("speaker") if occupant else None,
+                "slice": occupant.get("slice") if occupant else None,
             }
         )
 
