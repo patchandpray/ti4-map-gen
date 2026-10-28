@@ -308,7 +308,7 @@
           extra.setAttribute("y", cy + SIZE * 0.55);
           extra.setAttribute("text-anchor", "middle");
           extra.setAttribute("class", "overlay-label");
-          extra.textContent = hex.is_mecatol ? "Mecatol" : hex.position;
+          extra.textContent = hex.player || (hex.is_mecatol ? "Mecatol" : hex.position);
           g.appendChild(extra);
         } else if (!showArt && (hex.wormhole || hex.anomaly)) {
           const extra = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -403,6 +403,7 @@
         const skipText = skips.length ? `${skips.map(key => SKIP[key].name).join(", ")} tech skip` : "no tech skip";
         el.innerHTML = `
           <h3>${p.name}</h3>
+          <div class="where">${p.player ? `${p.player}${p.faction ? " · " + p.faction : ""}${p.speaker === 0 ? " · Speaker" : p.speaker != null ? " · " + (p.speaker + 1) : ""}` : "Open"}</div>
           <div class="where">${p.resources} resources / ${p.influence} influence next door / ${skipText}</div>
           <p class="adj">${adjacent.join(" · ")}</p>`;
         el.addEventListener("click", () => {
@@ -427,6 +428,7 @@
         <dl>
           <dt>Tile</dt><dd>${hex.tile_id}${hex.is_home ? " · home" : ""}${hex.is_mecatol ? " · Mecatol" : ""}</dd>
           ${hex.position ? `<dt>Position</dt><dd>${hex.position}</dd>` : ""}
+          ${hex.player ? `<dt>Player</dt><dd>${hex.player}${hex.faction ? " · " + hex.faction : ""}${hex.seat ? " · " + hex.seat : ""}</dd>` : ""}
           <dt>Coordinate</dt><dd>${hex.q},${hex.r}</dd>
           <dt>Value</dt><dd>${hex.resources}/${hex.influence} (optimal ${hex.optimal_resources}/${hex.optimal_influence})</dd>
           ${hexSkips(hex).length ? `<dt>Tech skip</dt><dd>${hexSkips(hex).map(key => SKIP[key].name).join(", ")}</dd>` : ""}
@@ -441,9 +443,14 @@
 
     function renderUnused() {
       const root = document.getElementById("unused");
-      const players = data.players.map(p =>
-        `${p.order}. ${p.name}${p.faction ? " · " + p.faction : ""}${p.turn ? " · to play" : ""}`
-      ).join("<br>");
+      const players = data.players
+        .slice()
+        .sort((a, b) => (a.speaker ?? 99) - (b.speaker ?? 99) || a.order - b.order)
+        .map(p => {
+          const seat = p.speaker === 0 ? "Speaker" : p.speaker != null ? String(p.speaker + 1) : "seat open";
+          return `${p.order}. ${p.name}${p.faction ? " · " + p.faction : ""}${p.slice ? " · slice " + p.slice : ""} · ${seat}${p.turn ? " · to play" : ""}`;
+        })
+        .join("<br>");
       const open = (data.factions || []).filter(f => !f.picked);
       root.innerHTML = `
         <p>${players}</p>
