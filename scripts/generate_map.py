@@ -69,8 +69,8 @@ PLAYERS = [
     {"order": 3, "name": "Rens", "faction": None, "slice": 4, "speaker": None, "claimed": False, "color": "#e67e22"},
     {"order": 4, "name": "Lars", "faction": "The L1z1x Mindnet", "slice": None, "speaker": None, "claimed": True, "color": "#ecf0f1"},
     {"order": 5, "name": "Tim", "faction": "The Winnu", "slice": None, "speaker": None, "claimed": True, "color": "#2ecc71"},
-    {"order": 6, "name": "Arie", "faction": None, "slice": None, "speaker": None, "claimed": False, "color": "#5dade2", "turn": True},
-    {"order": 7, "name": "Ruben", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#f1c40f"},
+    {"order": 6, "name": "Arie", "faction": "The Naaz-Rokha Alliance", "slice": None, "speaker": None, "claimed": True, "color": "#5dade2"},
+    {"order": 7, "name": "Ruben", "faction": None, "slice": None, "speaker": None, "claimed": True, "color": "#f1c40f", "turn": True},
 ]
 
 FACTION_POOL = [
